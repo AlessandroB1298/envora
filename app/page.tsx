@@ -10,8 +10,8 @@ export default function Home() {
 
 
         <h1 className="text-5xl text-gray-800 font-extrabold"> Hello, Welcome to</h1>
-        <h1 className="text-blue-700 text-5xl font-extrabold pb-4">Envora</h1>
-        <Button className="bg-gray-400">Click me Ho</Button>
+        <h1 className="text-blue-700 text-5xl font-extrabold">Envora</h1>
+        <Button className="bg-gray-400">Learn more</Button>
       </section>
     </div>
   );
