@@ -1,6 +1,5 @@
-import { CodePreview } from "@/code-preview";
-import { Button } from "@/components/ui/button";
-import { Link } from "lucide-react";
+import { CodePreview } from "@/app/components/code-preview";
+import { Button } from "@/app/components/button";
 export default function Page() {
   const basicButton =
     "<Button className=' bg-white text-black hover:bg-gray-300'>Click met</Button>";
@@ -13,7 +12,7 @@ export default function Page() {
 
   return (
     <div className=" ml-[25vw]  space-y-6 overflow-auto ">
-      <section className="grid  mt-10 grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4 hj">
+      <section className="grid  mt-10 grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
         <div className="space-y-4">
           <h2 className="text-xl text-white font-semibold">Basic Button</h2>
           <CodePreview
