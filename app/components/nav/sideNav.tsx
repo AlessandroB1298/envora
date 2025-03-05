@@ -11,24 +11,22 @@ const SideNav = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
 
   return (
-    <div className="h-[100vh] fixed mb-5 pl-5 border-1 overflow-auto z-10  bg-gray-700 border-gray-700 lg:w-[15vw] md:w-[17] md:p-2 ">
-
-
-
+    <div className="h-[100vh] fixed mb-5 pl-5 overflow-auto z-10 bg-gradient-to-b from-gray-800 to-gray-700 border-r border-gray-600/30 shadow-[5px_0_15px_rgba(0,0,0,0.2)] lg:w-[15vw] md:w-[22vw] md:p-2">
       <div className="mt-8">
         <Link
           href={"/"}
-          className="text-5xl mt-[100px] font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-700 "
+          className="text-2xl mt-[100px] font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-700 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
         >
           ENVORA
         </Link>
       </div>
-      <ul className="flex flex-col gap-3 mt-3 text-white space-y-2  w-3/4">
-        <div className="flex flex-row hover:bg-gray-600 text-md p-2 rounded-xl w-[12.8rem] gap-2">
-          <MousePointer />
+      <div className="border-b border-dotted border-gray-500/50 w-[90%] my-4"></div>
+      <ul className="flex flex-col gap-3 mt-3 text-white space-y-2 w-[90%]">
+        <div className="flex flex-row hover:bg-gray-600/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-700/70 backdrop-blur-sm">
+          <MousePointer className="text-blue-400" />
           <Link
             onClick={() => {
-              setButtonOpen(!buttonOpen);
+              setButtonOpen(!buttonOpen)
             }}
             className="w-full"
             href={"#"}
@@ -37,168 +35,181 @@ const SideNav = () => {
           </Link>
         </div>
         {buttonOpen && (
-          <ul className="flex flex-col gap-2 ml-3 w-[12rem] bg-gray-600 p-1 rounded-xl">
+          <ul className="flex flex-col gap-2 ml-3 w-[12.7rem] bg-gray-600/80 p-2 rounded-xl shadow-inner shadow-black/30 border border-gray-500/30 backdrop-blur-sm animate-in slide-in-from-left duration-200">
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-sm p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"/dashboard/buttons"}
             >
               Basic
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-sm p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Medium
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-sm p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Advanced
             </Link>
           </ul>
         )}
-        <div className="flex flex-row hover:bg-gray-600 text-md p-2 w-[12.8rem] rounded-xl gap-2">
-          <Play />
+        <div className="flex flex-row hover:bg-gray-600/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-700/70 backdrop-blur-sm">
+          <Play className="text-green-400" />
           <Link
             onClick={() => {
-              setAnimationsOpen(!animationsOpen);
+              setAnimationsOpen(!animationsOpen)
             }}
             className="w-full"
-
             href={"#"}
           >
             Animations
           </Link>
         </div>
         {animationsOpen && (
-          <ul className="flex flex-col gap-2 ml-3 w-[12rem] bg-gray-600 p-1 rounded-xl">
+          <ul className="flex flex-col gap-2 ml-3 w-[12.7rem] bg-gray-600/80 p-2 rounded-xl shadow-inner shadow-black/30 border border-gray-500/30 backdrop-blur-sm animate-in slide-in-from-left duration-200">
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"/dashboard/buttons"}
             >
               Basic
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Medium
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Advanced
             </Link>
           </ul>
         )}
-        <div className="flex flex-row hover:bg-gray-600 text-md p-2 w-[12.8rem] rounded-xl gap-2">
-
-          <TextSelect />
+        <div className="flex flex-row hover:bg-gray-600/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-700/70 backdrop-blur-sm">
+          <TextSelect className="text-purple-400" />
           <Link
             onClick={() => {
-              setTextOpen(!textOpen);
+              setTextOpen(!textOpen)
             }}
             className="w-full"
-
             href={"#"}
           >
             Text
           </Link>
         </div>
         {textOpen && (
-          <ul className="flex flex-col gap-2 ml-3 w-[12rem] bg-gray-600 p-1 rounded-xl">
+          <ul className="flex flex-col gap-2 ml-3 w-[12.7rem] bg-gray-600/80 p-2 rounded-xl shadow-inner shadow-black/30 border border-gray-500/30 backdrop-blur-sm animate-in slide-in-from-left duration-200">
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"/dashboard/buttons"}
             >
               Basic
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Medium
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Advanced
             </Link>
           </ul>
         )}
-        <div className="flex flex-row hover:bg-gray-600 text-md p-2 w-[12.8rem] rounded-xl gap-2">
-          <Clipboard />
+        <div className="flex flex-row hover:bg-gray-600/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-700/70 backdrop-blur-sm">
+          <Clipboard className="text-amber-400" />
           <Link
             onClick={() => {
-              setFormOpen(!formOpen);
+              setFormOpen(!formOpen)
             }}
             className="w-full"
-
             href={"#"}
           >
             Forms
           </Link>
         </div>
         {formOpen && (
-          <ul className="flex flex-col gap-2 ml-3 w-[12rem] bg-gray-600 p-1 rounded-xl">
+          <ul className="flex flex-col gap-2 ml-3 w-[12.7rem] bg-gray-600/80 p-2 rounded-xl shadow-inner shadow-black/30 border border-gray-500/30 backdrop-blur-sm animate-in slide-in-from-left duration-200">
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"/dashboard/buttons"}
             >
               Basic
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Medium
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Advanced
             </Link>
           </ul>
         )}
-        <div className="flex flex-row hover:bg-gray-600 text-md p-2 w-[12.8rem] rounded-xl gap-2">
-          <Compass />
+        <div className="flex flex-row hover:bg-gray-600/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-700/70 backdrop-blur-sm">
+          <Compass className="text-rose-400" />
           <Link
             onClick={() => {
-              setNavOpen(!navOpen);
+              setNavOpen(!navOpen)
             }}
             className="w-full"
-
             href={"#"}
           >
             Navs
           </Link>
         </div>
         {navOpen && (
-          <ul className="flex flex-col gap-2 ml-3 w-[12rem] bg-gray-600 p-1 rounded-xl">
+          <ul className="flex flex-col gap-2 ml-3 w-[12.7rem] bg-gray-600/80 p-2 rounded-xl shadow-inner shadow-black/30 border border-gray-500/30 backdrop-blur-sm animate-in slide-in-from-left duration-200">
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"/dashboard/buttons"}
             >
               Basic
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Medium
             </Link>
             <Link
-              className="hover:bg-gray-700 bg-gray-600 text-md p-2 rounded-xl"
+              className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
               href={"#"}
             >
               Advanced
             </Link>
           </ul>
         )}
+        {/* End of main navigation items */}
+        <div className="border-b border-dotted border-gray-500/50 w-[90%] my-4"></div>
+
+        {/* Documentation Section */}
+        <div className="flex flex-row hover:bg-gray-600/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-700/70 backdrop-blur-sm">
+          <TextSelect className="text-cyan-400" />
+          <Link href={"#"} className="w-full">
+            Documentation
+          </Link>
+        </div>
+
+        {/* About Section */}
+        <div className="flex flex-row hover:bg-gray-600/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-700/70 backdrop-blur-sm">
+          <Compass className="text-teal-400" />
+          <Link href={"#"} className="w-full">
+            About
+          </Link>
+        </div>
       </ul>
     </div>
   );
