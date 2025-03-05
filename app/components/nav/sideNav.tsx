@@ -11,7 +11,7 @@ const SideNav = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
 
   return (
-    <div className="h-[100vh] absolute  mb-5 pl-5 border-1 overflow-auto z-10  bg-gray-700 border-gray-700 lg:w-[15vw] md:w-[17] md:p-2 ">
+    <div className="h-[100vh] fixed mb-5 pl-5 border-1 overflow-auto z-10  bg-gray-700 border-gray-700 lg:w-[15vw] md:w-[17] md:p-2 ">
 
 
 
