@@ -62,18 +62,6 @@ export default function Page() {
           </CodePreview>
         </div>
       </section>
-      <section className="grid  mb-10 mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
-        <div className="space-y-4">
-          <h2 className="text-xl text-white font-semibold">
-            Basic Framer Motion Animation
-          </h2>
-          <CodePreview
-            className="bg-gray-700  h-[65vh] "
-            code={framerAnimation}
-            fileName="FramerMotionDiv.tsx"
-          ></CodePreview>
-        </div>
-      </section>
     </div>
   );
 }

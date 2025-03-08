@@ -12,7 +12,6 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
   const bodyContainerRef = useRef<HTMLDivElement>(null);
 
-  //NOTE: gsap happens in a linear fashon, so we can create a timeline to display how the animations will occur, in a linear fashion
   useGSAP(() => {
 
     const tl = gsap.timeline();
