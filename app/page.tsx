@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 
+
 gsap.registerPlugin(useGSAP); //register plugin to avoid react dependency issues 
 
 export default function Home() {
@@ -47,7 +48,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl text-gray-100 font-extrabold mb-2">Hello, Welcome to</h1>
+          <h1 className="text-4xl md:text-5xl text-gray-100 font-bold mb-2">Hello, Welcome to</h1>
           <h1 className="text-blue-500 text-4xl md:text-5xl font-extrabold">Envora</h1>
         </div>
 
@@ -57,10 +58,9 @@ export default function Home() {
             {/* Card 1 */}
             <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
               <div className="p-6">
-                <h2 className="text-xl font-bold text-gray-100 mb-4">Feature One</h2>
+                <h2 className="text-xl font-bold text-gray-100 mb-4">Copy & Paste Components</h2>
                 <p className="text-gray-300">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
+                  Easy to use and resuable components, spanning buttons, animations, text, forms, navs and more!
                 </p>
               </div>
             </div>
@@ -68,10 +68,10 @@ export default function Home() {
             {/* Card 2 */}
             <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
               <div className="p-6">
-                <h2 className="text-xl font-bold text-gray-100 mb-4">Feature Two</h2>
+                <h2 className="text-xl font-bold text-gray-100 mb-4">ShadeCn, GSAP, and FramerMotion</h2>
                 <p className="text-gray-300">
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
+                  The components here, are built on top of well-existing libraries, creating animations using industry
+                  standard animation libraries, such as GSAP and FramerMotion.
                 </p>
               </div>
             </div>
@@ -79,9 +79,10 @@ export default function Home() {
             {/* Card 3 */}
             <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500  hover:bg-gray-600 transition-all">
               <div className="p-6">
-                <h2 className="text-xl font-bold text-gray-100 mb-4">Feature Three</h2>
+                <h2 className="text-xl font-bold text-gray-100 mb-4">Light Weight and Resuable</h2>
                 <p className="text-gray-300">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  This is the motto for this small ui library, making sure these components are not bloated,
+                  ensuring a good UI and DX.
                 </p>
               </div>
 

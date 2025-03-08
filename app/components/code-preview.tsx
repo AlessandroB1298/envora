@@ -33,7 +33,7 @@ export function CodePreview({
         value={activeTab}
         onValueChange={setActiveTab}
       >
-        <div className="flex items-center justify-between border-b px-4">
+        <div className="flex  items-center justify-between border-b px-4">
           {fileName && (
             <p className="text-sm text-muted-foreground py-3">{fileName}</p>
           )}
@@ -46,7 +46,7 @@ export function CodePreview({
           {children}
         </TabsContent>
         <TabsContent value="code" className="p-0">
-          <div className="p-4 rounded-md bg-gray-600 overflow-auto max-h-[500px] m-3">
+          <div className="p-4 rounded-md bg-gray-600  max-h-full m-3">
             <SyntaxHighlighter
               language={language}
               style={vscDarkPlus}

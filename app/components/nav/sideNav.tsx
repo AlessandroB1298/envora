@@ -2,7 +2,13 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { MousePointer, TextSelect, Play, Clipboard, Compass } from "lucide-react"
+import {
+  MousePointer,
+  TextSelect,
+  Play,
+  Clipboard,
+  Compass,
+} from "lucide-react";
 const SideNav = () => {
   const [buttonOpen, setButtonOpen] = useState<boolean>(false);
   const [animationsOpen, setAnimationsOpen] = useState<boolean>(false);
@@ -11,7 +17,7 @@ const SideNav = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
 
   return (
-    <div className="h-[100vh] fixed mb-5 pl-5 overflow-auto z-10 bg-gradient-to-b from-gray-800 to-gray-700 border-r border-gray-600/30 shadow-[5px_0_15px_rgba(0,0,0,0.2)] lg:w-[15vw] md:w-[22vw] md:p-2">
+    <div className="h-[100vh] fixed mb-5 pl-5 overflow-auto z-10 bg-gradient-to-b from-gray-800 to-gray-700 border-r border-gray-600/30 shadow-[5px_0_15px_rgba(0,0,0,0.2)] lg:w-[15.8vw] md:w-[22vw] md:p-2">
       <div className="mt-8">
         <Link
           href={"/"}
@@ -26,7 +32,7 @@ const SideNav = () => {
           <MousePointer className="text-blue-400" />
           <Link
             onClick={() => {
-              setButtonOpen(!buttonOpen)
+              setButtonOpen(!buttonOpen);
             }}
             className="w-full"
             href={"#"}
@@ -60,7 +66,7 @@ const SideNav = () => {
           <Play className="text-green-400" />
           <Link
             onClick={() => {
-              setAnimationsOpen(!animationsOpen)
+              setAnimationsOpen(!animationsOpen);
             }}
             className="w-full"
             href={"#"}
@@ -72,13 +78,13 @@ const SideNav = () => {
           <ul className="flex flex-col gap-2 ml-3 w-[12.7rem] bg-gray-600/80 p-2 rounded-xl shadow-inner shadow-black/30 border border-gray-500/30 backdrop-blur-sm animate-in slide-in-from-left duration-200">
             <Link
               className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
-              href={"/dashboard/buttons"}
+              href={"/dashboard/animations"}
             >
               Basic
             </Link>
             <Link
               className="hover:bg-gray-700 hover:shadow-sm hover:shadow-black/20 bg-gray-600/70 text-sm p-2 rounded-xl transition-all duration-150 border border-gray-500/20"
-              href={"#"}
+              href={"/dashboard/animations"}
             >
               Medium
             </Link>
@@ -94,7 +100,7 @@ const SideNav = () => {
           <TextSelect className="text-purple-400" />
           <Link
             onClick={() => {
-              setTextOpen(!textOpen)
+              setTextOpen(!textOpen);
             }}
             className="w-full"
             href={"#"}
@@ -128,7 +134,7 @@ const SideNav = () => {
           <Clipboard className="text-amber-400" />
           <Link
             onClick={() => {
-              setFormOpen(!formOpen)
+              setFormOpen(!formOpen);
             }}
             className="w-full"
             href={"#"}
@@ -162,7 +168,7 @@ const SideNav = () => {
           <Compass className="text-rose-400" />
           <Link
             onClick={() => {
-              setNavOpen(!navOpen)
+              setNavOpen(!navOpen);
             }}
             className="w-full"
             href={"#"}
