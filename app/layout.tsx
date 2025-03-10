@@ -4,6 +4,9 @@ import SideNav from "./components/nav/sideNav";
 export const metadata: Metadata = {
   title: "Evora",
   description: "fun and easy component-esk lib",
+  icons: {
+    icon: "icon.svg"
+  }
 };
 
 export default function RootLayout({
@@ -13,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
 
+      </head>
       <body className="bg-gray-800 items-center justify-items-center">
         <SideNav />
         {children}

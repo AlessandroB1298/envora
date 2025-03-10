@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Background shape - rounded square in gray-800 (#1f2937) -->
+  <rect x="16" y="16" width="224" height="224" rx="48" fill="#1f2937" />
+  
+  <!-- Inner shadow/layer in gray-700 (#374151) -->
+  <rect x="32" y="32" width="192" height="192" rx="36" fill="#374151" />
+  
+  <!-- Accent decoration - blue-700 (#1d4ed8) circle in top right -->
+  <circle cx="192" cy="64" r="24" fill="#1d4ed8" />
+  
+  <!-- Letter E in blue-300 (#93c5fd) -->
+  <path d="M70 80 L160 80 L160 108 L98 108 L98 124 L150 124 L150 152 L98 152 L98 168 L160 168 L160 196 L70 196 Z" fill="#93c5fd" />
+  
+  <!-- Subtle blue-700 (#1d4ed8) highlight on the left side of the E -->
+  <path d="M70 80 L88 80 L88 196 L70 196 Z" fill="#1d4ed8" />
+</svg>
