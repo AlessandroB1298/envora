@@ -48,7 +48,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="grid  mb-10 mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
+      <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
         <div className="space-y-4">
           <h2 className="text-xl text-white font-semibold">
             Basic Framer Motion Animation

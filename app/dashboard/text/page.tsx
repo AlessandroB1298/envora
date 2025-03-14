@@ -1,6 +1,6 @@
 import { CodePreview } from "@/app/components/code-preview";
 import Landing from "@/app/components/landingPage/landing";
-
+import { landingPageText } from "@/app/components/text/text";
 export default function Page() {
   return (
     <div className=" ml-[25vw] space-y-6  ">
@@ -22,7 +22,7 @@ export default function Page() {
           </h2>
           <CodePreview
             className="bg-gray-700 h-[40vh] overflow-y-auto "
-            code={"Some code"}
+            code={landingPageText}
             fileName="basicTextAnimations.tsx"
           >
             <Landing />

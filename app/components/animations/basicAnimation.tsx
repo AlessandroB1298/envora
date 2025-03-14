@@ -1,7 +1,7 @@
 "use client"
-import gsap from 'gsap';
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
+import gsap from "gsap";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 
 type BasicAnimationProps = {
     boxes?: Array<number>
@@ -16,7 +16,7 @@ export const BasicAnimation: React.FC<BasicAnimationProps> = ({ boxes }) => {
         }, {
             y: 50,
             duration: 1,
-            ease: 'power2.inOut' // Using a standard GSAP ease instead of easeIn
+            ease: "power2.inOut" // Using a standard GSAP ease instead of easeIn
         },)
 
     }, [])

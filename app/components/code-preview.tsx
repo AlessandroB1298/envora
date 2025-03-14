@@ -34,7 +34,7 @@ export function CodePreview({
   const [activeTab, setActiveTab] = useState<string>("preview");
 
   return (
-    <Card className={cn(` w-${size}`, className)}>
+    <Card className={cn(` overflow-hidden overflow-y-auto  w-${size}`, className)}>
       <Tabs
         defaultValue="preview"
         value={activeTab}
