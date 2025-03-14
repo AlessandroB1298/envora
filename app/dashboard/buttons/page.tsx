@@ -9,10 +9,12 @@ import {
 
 export default function Page() {
   return (
-    <div className=" ml-[25vw] space-y-6 overflow-auto ">
+    <div className=" ml-[25vw] overflow-y-auto space-y-6  ">
       <section className=" flex flex-col mt-5">
         <div className="gap-2">
-          <h2 className="text-3xl text-white font-bold">Basic Buttons</h2>
+          <h2 className=" text-4xl font-extrabold bg-gradient-to-br from-blue-300 to-white bg-clip-text text-transparent ">
+            Buttons
+          </h2>
           <p className="w-1/2 mt-2 text-white opacity-20">
             This page is designed to showcase some basic buttons and their
             properties, using tailwind for styling, however we must first look
@@ -24,8 +26,8 @@ export default function Page() {
       <section className="mt-5">
         <div className="gap-2">
           <p className="w-1/2 text-white opacity-20">
-            Using Shadecn{"'s"} button component we can modify the button{"'s"}{" "}
-            ui
+            Using Shadecn{"'s"} button component we can modify the button
+            {"'s"} ui
           </p>
         </div>
         <div className=" w-1/2">
@@ -33,11 +35,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
+      <section className="grid grid-cols-1  w-3/4 gap-8">
         <div className="space-y-4">
           <h2 className="text-xl text-white font-semibold">Basic Button</h2>
           <CodePreview
-            className="bg-gray-700 h-[25vh] "
+            className="bg-gray-700 h-[300px]"
             code={basicButton}
             fileName="buttonBasicExample.tsx"
           >
@@ -46,13 +48,11 @@ export default function Page() {
             </Button>
           </CodePreview>
         </div>
-      </section>
 
-      <section className="grid  mt-10 grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-10">
-        <div className="space-y-4 justify-between">
+        <div className="space-y-4">
           <h2 className="text-xl text-white font-semibold">Hover Button</h2>
           <CodePreview
-            className="bg-gray-700 h-[25vh]"
+            className="bg-gray-700 h-[300px]"
             code={hoverButton}
             fileName="buttonHoverExample.tsx"
           >
@@ -61,13 +61,11 @@ export default function Page() {
             </Button>
           </CodePreview>
         </div>
-      </section>
 
-      <section className="grid  mt-10 grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
         <div className="space-y-4">
           <h2 className="text-xl text-white font-semibold">Rounded</h2>
           <CodePreview
-            className="bg-gray-700 h-[25vh]"
+            className="bg-gray-700 h-[300px]"
             code={roundedButton}
             fileName="buttonRoundExample.tsx"
           >

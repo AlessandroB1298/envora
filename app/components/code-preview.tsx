@@ -6,7 +6,12 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import { useState } from "react";
 import { Card } from "@/app/components/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/components/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/app/components/tabs";
 import { cn } from "@/lib/utils";
 
 interface CodePreviewProps {
@@ -15,6 +20,7 @@ interface CodePreviewProps {
   className?: string;
   language?: string;
   children: React.ReactNode;
+  size?: string;
 }
 
 export function CodePreview({
@@ -23,11 +29,12 @@ export function CodePreview({
   className,
   language = "tsx",
   children,
+  size = "200px",
 }: CodePreviewProps) {
   const [activeTab, setActiveTab] = useState<string>("preview");
 
   return (
-    <Card className={cn("overflow-hidden", className)}>
+    <Card className={cn(` w-${size}`, className)}>
       <Tabs
         defaultValue="preview"
         value={activeTab}
@@ -50,7 +57,11 @@ export function CodePreview({
             <SyntaxHighlighter
               language={language}
               style={vscDarkPlus}
-              customStyle={{ background: "transparent", margin: 0 }}
+              customStyle={{
+                background: "transparent",
+                margin: 0,
+                width: `full`,
+              }}
               showLineNumbers
             >
               {code}
