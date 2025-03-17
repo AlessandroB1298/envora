@@ -15,7 +15,7 @@ const SideNav = () => {
       <div className="mt-8">
         <Link
           href={"/"}
-          className="text-2xl mt-[100px] font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-700 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+          className="text-2xl  w-full mt-[100px] font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-700 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
         >
           ENVORA
         </Link>
