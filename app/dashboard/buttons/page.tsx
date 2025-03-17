@@ -37,7 +37,7 @@ export default function Page() {
 
       <section className="grid grid-cols-1  w-3/4 gap-8">
         <div className="space-y-4">
-          <h2 className="text-xl text-white font-semibold">Basic Button</h2>
+          <h2 className="text-xl text-white font-bold">Basic Button</h2>
           <CodePreview
             className="bg-gray-700 h-[300px]"
             code={basicButton}
@@ -50,7 +50,7 @@ export default function Page() {
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-xl text-white font-semibold">Hover Button</h2>
+          <h2 className="text-xl text-white font-bold">Hover Button</h2>
           <CodePreview
             className="bg-gray-700 h-[300px]"
             code={hoverButton}
@@ -63,7 +63,7 @@ export default function Page() {
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-xl text-white font-semibold">Rounded</h2>
+          <h2 className="text-xl text-white font-bold">Rounded</h2>
           <CodePreview
             className="bg-gray-700 h-[300px]"
             code={roundedButton}

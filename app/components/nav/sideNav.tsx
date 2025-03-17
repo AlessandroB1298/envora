@@ -11,7 +11,7 @@ import {
 const SideNav = () => {
 
   return (
-    <div className="h-[100vh] fixed mb-5 pl-5 overflow-auto z-10 bg-gradient-to-b from-gray-800 to-gray-700 border-r border-gray-600/30 shadow-[5px_0_15px_rgba(0,0,0,0.2)] lg:w-[15.8vw] md:w-[22vw] md:p-2">
+    <div className="h-[100vh]  fixed mb-5 pl-5 overflow-auto z-10 bg-gradient-to-b from-gray-800 to-gray-700 border-r border-gray-600/30 shadow-[5px_0_15px_rgba(0,0,0,0.2)] lg:w-[15.8vw] md:w-[10vw] ">
       <div className="mt-8">
         <Link
           href={"/"}
@@ -20,8 +20,8 @@ const SideNav = () => {
           ENVORA
         </Link>
       </div>
-      <div className="border-b border-dotted border-gray-500/50 w-[90%] my-4"></div>
-      <ul className="flex flex-col gap-3 mt-3 text-white space-y-2 w-[90%]">
+      <div className="border-b border-dotted border-gray-500/50 w-[90%] my-4 md:p-3 sm-p-2"></div>
+      <ul className="flex flex-col gap-3 mt-3 text-white space-y-2 w-[90%] ">
         <div className="flex flex-row hover:bg-gray-600/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-700/70 backdrop-blur-sm">
           <MousePointer className="text-blue-400" />
           <Link

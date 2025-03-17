@@ -19,9 +19,10 @@ export default function RootLayout({
       <head>
 
       </head>
-      <body className="bg-gray-800 items-center justify-items-center">
+      <body className=" bg-gray-800 w-full items-center justify-items-center">
         <SideNav />
         {children}
+
       </body>
     </html>
   );

@@ -35,7 +35,7 @@ export default function Page() {
 
       <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
         <div className="space-y-4">
-          <h2 className="text-xl text-white font-semibold">
+          <h2 className="text-xl text-white font-bold">
             Basic gsap Animation
           </h2>
           <CodePreview
@@ -50,7 +50,7 @@ export default function Page() {
 
       <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
         <div className="space-y-4">
-          <h2 className="text-xl text-white font-semibold">
+          <h2 className="text-xl text-white font-bold">
             Basic Framer Motion Animation
           </h2>
           <CodePreview

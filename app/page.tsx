@@ -38,23 +38,17 @@ export default function Home() {
 
 
   }, [])
-
-
-
-
+  
   return (
-    <div className="min-h-screen flex flex-col ml-40  bg-gray-800  overflow-y-auto w-full">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gray-800 flex flex-col ml-40  overflow-y-auto md:w-[70vw] sm:w-[50vw] md:p-3 sm-p-2 ">
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl text-gray-100 font-bold mb-2">Hello, Welcome to</h1>
-          <h1 className="text-blue-500 text-4xl md:text-5xl font-extrabold">Envora</h1>
+          <h1 className=" text-6xl md:text-7xl font-extrabold bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent ">Envora</h1>
         </div>
 
-        {/* Cards Grid */}
         <div ref={containerRef}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Card 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 sm:grid-cols-1 gap-8 max-w-6xl mx-auto">
             <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">Copy & Paste Components</h2>
@@ -64,7 +58,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2 */}
             <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">ShadeCn, GSAP, and FramerMotion</h2>
@@ -75,7 +68,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3 */}
             <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500  hover:bg-gray-600 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">Light Weight and Resuable</h2>
@@ -95,7 +87,6 @@ export default function Home() {
         <div ref={bodyContainerRef}>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Card 1 */}
             <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">Feature One</h2>
@@ -106,7 +97,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2 */}
             <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">Feature Two</h2>
@@ -117,7 +107,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3 */}
             <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500  hover:bg-gray-600 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">Feature Three</h2>
