@@ -6,7 +6,7 @@ const BasicFramerMotion = () => {
     <div>
       <motion.h2
         initial={{ y: 300 }}
-        transition={{ ease: "easeOut", duration: 1 }}
+        transition={{ ease: "easeOut", duration: 2, repeat: Infinity, repeatDelay: 1 }}
         animate={{ y: 50 }}
         className="text-white font-bold text-3xl"
       >

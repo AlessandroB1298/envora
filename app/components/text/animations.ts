@@ -15,7 +15,9 @@ export const basicDivAnimated =
   + '            y: 300' + '\n'
   + '        }, {' + '\n'
   + '            y: 50,' + '\n'
-  + '            duration: 1,' + '\n'
+  + '            duration: 2,' + '\n'
+  + '            repeat: -1,' + '\n'
+  + '            repeatDelay: 1,' + '\n'
   + '            ease: "power2.inOut" // Using a standard GSAP ease instead of easeIn' + '\n'
   + '        },)' + '\n'
   + '' + '\n'
@@ -46,7 +48,7 @@ export const framerAnimation =
   "\n" +
   "    initial={{ y: 300 }}" +
   "\n" +
-  "    transition={{ ease: 'easeOut', duration: 1 }}" +
+  "    transition={{ ease: 'easeOut', duration: 2, repeat : Infinity, repeatDelay : 1 }}" +
   "\n" +
   "    animate={{ y: 50 }}" +
   "\n" +

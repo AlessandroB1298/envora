@@ -14,7 +14,9 @@ export const BasicAnimation = () => {
             y: 300
         }, {
             y: 50,
-            duration: 1,
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 1,
             ease: "power2.inOut" // Using a standard GSAP ease instead of easeIn
         },)
 
