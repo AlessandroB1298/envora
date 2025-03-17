@@ -2,41 +2,76 @@
 import gsap from "gsap";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 
-type BasicAnimationProps = {
-  boxes?: Array<number>
-}
-export const DemoAnimation: React.FC<BasicAnimationProps> = ({ boxes }) => {
+
+export const NewDemoAnimation = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const secondRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
+
     const tl = gsap.timeline();
+
     tl.fromTo(containerRef.current, {
-      y: 300
+      y: 300,
+      opacity: 0
     }, {
       y: 50,
+      opacity: 1,
       duration: 1,
-      ease: "power2.inOut" // Using a standard GSAP ease instead of easeIn
-    },)
+      stagger: 0.5,
+      ease: "power2.inOut"
+    })
+
+    tl.fromTo(secondRef.current, {
+      y: 500,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 90,
+      stagger: 0.5,
+      duration: 1,
+      ease: "power2.inOut"
+    })
 
   }, [])
 
   return (
-    <div ref={containerRef}>
-      {boxes ? (
-        <div className="grid grid-cols-3 gap-5 ">
-          {boxes.map((_, index) => (
-            <div key={index + 1} className=" flex flex-col items-center p-2  justify-center w-[9rem] h-[7rem] bg-gray-600 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:bg-gray-400 transition-all">
-              <h2 className="font-bold text-white text-md">Some Text</h2>
+    <div >
+      <div ref={containerRef} className="grid grid-cols-2 gap-8">
 
-            </div>
-          ))}
+
+        <div className=" flex flex-col items-center p-2  justify-center max-w-6xl h-[7rem] bg-blue-600 hover:border-white hover:bg-blue-400 rounded-lg shadow-lg  hover:cursor-pointer duration-100 transition ease-in hover:translate-y-2  ">
+          <h2 className="text-white font-bold text-2xl ">Feature 1</h2>
         </div>
-      ) : (
-        <h2 className="text-white font-bold text-3xl">Some Animations</h2>
 
-      )}
+        <div className=" flex flex-col items-center justify-center max-w-6xl h-[7rem]  bg-blue-600 hover:border-white hover:bg-blue-400  rounded-lg shadow-lg duration-100 transition ease-in hover:translate-y-2 hover:cursor-pointer ">
+          <h2 className="text-white font-bold text-2xl ">Feature 2</h2>
+
+        </div>
+
+
+      </div>
+
+      <div className="grid grid-cols-3 gap-8" ref={secondRef}>
+        <div className=" flex flex-col items-center p-2  justify-center max-w-4xl h-[7rem]  bg-blue-600 hover:border-white hover:bg-blue-400   rounded-lg shadow-lg duration-100 transition ease-in hover:translate-y-2 hover:cursor-pointer">
+          <h2 className="text-white font-bold text-2xl ">Feature 3</h2>
+        </div>
+
+        <div className=" flex flex-col items-center justify-center max-w-4xl h-[7rem]  bg-blue-600 hover:border-white hover:bg-blue-400  rounded-lg shadow-lg duration-100 transition ease-in hover:translate-y-2 hover:cursor-pointer">
+          <h2 className="text-white font-bold text-2xl ">Feature 4</h2>
+        </div>
+
+        <div className=" flex flex-col items-center justify-center max-w-4xl h-[7rem]  bg-blue-600 hover:border-white hover:bg-blue-400   shadow-lg rounded-lg duration-100 transition ease-in hover:translate-y-2 hover:cursor-pointer">
+          <h2 className="text-white font-bold text-2xl ">Feature 5</h2>
+
+        </div>
+      </div>
+
     </div>
-  );
+  )
+
 }

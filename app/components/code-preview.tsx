@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 
 interface CodePreviewProps {
   code: string;
+  components?: string;
   fileName?: string;
   className?: string;
   language?: string;
@@ -26,6 +27,7 @@ interface CodePreviewProps {
 export function CodePreview({
   code,
   fileName,
+  components = "There are no components for this demo",
   className,
   language = "tsx",
   children,
@@ -44,9 +46,11 @@ export function CodePreview({
           {fileName && (
             <p className="text-sm text-muted-foreground py-3">{fileName}</p>
           )}
-          <TabsList className="grid grid-cols-2 w-[200px] my-2">
+          <TabsList className="grid grid-cols-3 w-[400px]  my-2">
             <TabsTrigger value="preview">Preview</TabsTrigger>
             <TabsTrigger value="code">Code</TabsTrigger>
+            <TabsTrigger value="components">Components</TabsTrigger>
+
           </TabsList>
         </div>
         <TabsContent value="preview" className="p-4 rounded-md">
@@ -67,7 +71,31 @@ export function CodePreview({
               {code}
             </SyntaxHighlighter>
           </div>
+
         </TabsContent>
+
+
+        <TabsContent value="components" className="p-0">
+          <div className="p-4 rounded-md bg-gray-600  max-h-full m-3">
+            <SyntaxHighlighter
+              language={language}
+              style={vscDarkPlus}
+              customStyle={{
+                background: "transparent",
+                margin: 0,
+                width: `full`,
+              }}
+              showLineNumbers
+            >
+              {components}
+            </SyntaxHighlighter>
+          </div>
+
+        </TabsContent>
+
+
+
+
       </Tabs>
     </Card>
   );

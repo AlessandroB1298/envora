@@ -1,6 +1,6 @@
 "use client";
 
-import { DemoAnimation } from "../animations/demoAnimation";
+import { NewDemoAnimation } from "../animations/demoAnimation";
 const Landing = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -15,8 +15,7 @@ const Landing = () => {
           morbi, consectetur malesuad
         </p>
 
-        <DemoAnimation boxes={[1, 2, 3]} />
-
+        <NewDemoAnimation />
 
 
       </section>
