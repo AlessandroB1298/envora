@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
 
-body {
-  margin: auto;
+
+body{
+  background : #1f2836;
+  background-image: linear-gradient(to bottom, #1f2836, #445673);
+  border-right: 1px solid rgba(75, 85, 99, 0.3);
 }
 
 :root {

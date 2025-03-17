@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
 
       </head>
-      <body className=" bg-gray-800 w-full items-center justify-items-center">
+      <body className=" h-full w-full items-center justify-items-center">
         <SideNav />
         {children}
 

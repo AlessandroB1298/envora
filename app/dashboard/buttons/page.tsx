@@ -62,7 +62,7 @@ export default function Page() {
           </CodePreview>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 mb-64">
           <h2 className="text-xl text-white font-bold">Rounded</h2>
           <CodePreview
             className="bg-gray-700 h-[300px]"

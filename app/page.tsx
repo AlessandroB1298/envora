@@ -38,9 +38,9 @@ export default function Home() {
 
 
   }, [])
-  
+
   return (
-    <div className="min-h-screen bg-gray-800 flex flex-col ml-40  overflow-y-auto md:w-[70vw] sm:w-[50vw] md:p-3 sm-p-2 ">
+    <div className="min-h-screen    flex flex-col ml-40   md:w-[70vw] sm:w-[50vw] md:p-3 sm-p-2 ">
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl text-gray-100 font-bold mb-2">Hello, Welcome to</h1>

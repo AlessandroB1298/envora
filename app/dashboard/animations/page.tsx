@@ -10,7 +10,7 @@ import {
 export default function Page() {
   return (
     <div className=" ml-[25vw] space-y-6  ">
-      <section className=" flex flex-col mt-5">
+      <section className=" flex flex-col">
         <div className="gap-2">
           <h2 className=" text-4xl font-extrabold bg-gradient-to-br from-blue-300 to-white bg-clip-text text-transparent ">Animations</h2>
           <p className="w-1/2 mt-2 text-white opacity-20">
@@ -48,7 +48,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
+      <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4 mb-40">
         <div className="space-y-4">
           <h2 className="text-xl text-white font-bold">
             Basic Framer Motion Animation
