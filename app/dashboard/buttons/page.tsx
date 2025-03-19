@@ -1,6 +1,7 @@
 import { CodePreview } from "@/app/components/code-preview";
 import { Button } from "@/app/components/button";
 import CopyContainer from "@/app/components/copyButtonContainer";
+import { RingFocused } from "@/app/components/text/buttons";
 import {
   basicButton,
   hoverButton,
@@ -62,7 +63,7 @@ export default function Page() {
           </CodePreview>
         </div>
 
-        <div className="space-y-4 mb-64">
+        <div className="space-y-4 ">
           <h2 className="text-xl text-white font-bold">Rounded</h2>
           <CodePreview
             className="bg-gray-700 h-[300px]"
@@ -74,7 +75,27 @@ export default function Page() {
             </Button>
           </CodePreview>
         </div>
+
+
+
+        <div className="space-y-4 mb-64">
+          <h2 className="text-xl text-white font-bold">Ring Focus</h2>
+          <CodePreview
+            className="bg-gray-700 h-[300px]"
+            code={RingFocused}
+            fileName="buttonRoundExample.tsx"
+          >
+            <Button className=" text-black bg-white hover:bg-gray-200 focus:ring-2 focus:ring-gray-900 focus:ring-opacity-50 focus:ring-offset-2">
+              Click me
+            </Button>
+          </CodePreview>
+        </div>
+
+
+
       </section>
+
+
     </div>
   );
 }
