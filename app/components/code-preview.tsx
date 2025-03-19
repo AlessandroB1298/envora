@@ -31,7 +31,7 @@ export function CodePreview({
   className,
   language = "tsx",
   children,
-  size = "200px",
+  size = "300px",
 }: CodePreviewProps) {
   const [activeTab, setActiveTab] = useState<string>("preview");
 
@@ -127,6 +127,7 @@ export function CodePreview({
                   background: "transparent",
                   margin: 0,
                   width: `full`,
+                  zIndex: "100"
                 }}
                 showLineNumbers
               >
