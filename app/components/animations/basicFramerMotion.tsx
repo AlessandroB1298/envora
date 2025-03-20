@@ -6,11 +6,12 @@ const BasicFramerMotion = () => {
     <div>
       <motion.h2
         initial={{ y: 300 }}
-        transition={{ ease: "easeOut", duration: 2, repeat: Infinity, repeatDelay: 1 }}
-        animate={{ y: 50 }}
-        className="text-white font-bold text-3xl"
+        transition={{ ease: "easeOut", duration: 2, repeat: Infinity, repeatDelay: 0.5, repeatType: "mirror" }}
+        animate={{ y: 50, }}
+        className="h-[6rem] w-[7rem] bg-blue-300 flex flex-col items-center justify-center "
+
       >
-        Some Animation
+
       </motion.h2>
     </div>
   );

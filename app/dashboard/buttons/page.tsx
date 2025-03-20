@@ -12,7 +12,7 @@ export default function Page() {
     <div className=" ml-[25vw] overflow-y-auto space-y-6  ">
       <section className=" flex flex-col mt-5">
         <div className="gap-2">
-          <h2 className=" text-4xl font-extrabold bg-gradient-to-br from-blue-300 to-white bg-clip-text text-transparent ">
+          <h2 className=" text-4xl font-extrabold bg-gradient-to-br from-blue-700 to-white bg-clip-text text-transparent ">
             Buttons
           </h2>
           <p className="w-1/2 mt-2 text-white opacity-20">
@@ -39,7 +39,7 @@ export default function Page() {
         <div className="space-y-4">
           <h2 className="text-xl text-white font-bold">Basic Button</h2>
           <CodePreview
-            className="bg-gray-700 h-[300px] "
+            className="bg-gray-700 h-[350px] "
             code={basicButtonText}
             fileName="buttonBasicExample.tsx"
           >
@@ -50,7 +50,7 @@ export default function Page() {
         <div className="space-y-4">
           <h2 className="text-xl text-white font-bold">Hover Button</h2>
           <CodePreview
-            className="bg-gray-700 h-[300px]"
+            className="bg-gray-700 h-[350px]"
 
             code={hoverButtonText}
 
@@ -63,7 +63,7 @@ export default function Page() {
         <div className="space-y-4 ">
           <h2 className="text-xl text-white font-bold">Rounded</h2>
           <CodePreview
-            className="bg-gray-700 h-[300px]"
+            className="bg-gray-700 h-[350px]"
 
             code={roundedButtonText}
 
@@ -78,7 +78,7 @@ export default function Page() {
         <div className="space-y-4 mb-64">
           <h2 className="text-xl text-white font-bold">Ring Focus</h2>
           <CodePreview
-            className="bg-gray-700 h-[300px]"
+            className="bg-gray-700 h-[350px]"
             code={ringFocusedButtonText}
             fileName="buttonRoundExample.tsx"
           >

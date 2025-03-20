@@ -66,6 +66,7 @@ export function CodePreview({
                   background: "transparent",
                   margin: 0,
                   width: `full`,
+                  fontSize: "10px"
                 }}
                 showLineNumbers
               >
@@ -85,6 +86,7 @@ export function CodePreview({
                   background: "transparent",
                   margin: 0,
                   width: `full`,
+                  fontSize: "10px"
                 }}
                 showLineNumbers
               >
@@ -127,7 +129,7 @@ export function CodePreview({
                   background: "transparent",
                   margin: 0,
                   width: `full`,
-                  zIndex: "100"
+                  fontSize: "10px"
                 }}
                 showLineNumbers
               >

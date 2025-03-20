@@ -5,14 +5,18 @@ import BasicFramerMotion from "@/app/components/animations/basicFramerMotion";
 import {
   framerAnimation,
   basicDivAnimated,
+  multipleDivText,
 } from "@/app/components/text/animations";
+import { MultipleDivs } from "@/app/components/animations/multipleDivs";
 
 export default function Page() {
   return (
-    <div className=" ml-[25vw] space-y-6  ">
+    <div className=" ml-[25vw] space-y-6 mt-4  ">
       <section className=" flex flex-col">
         <div className="gap-2">
-          <h2 className=" text-4xl font-extrabold bg-gradient-to-br from-blue-300 to-white bg-clip-text text-transparent ">Animations</h2>
+          <h2 className=" text-4xl font-extrabold bg-gradient-to-br from-blue-700 to-white bg-clip-text text-transparent ">
+
+            Animations</h2>
           <p className="w-1/2 mt-2 text-white opacity-20">
             This page is designed to showcase some basic animations and their
             properties, using tailwind for styling, however we must first look
@@ -48,7 +52,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4 mb-40">
+      <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
         <div className="space-y-4">
           <h2 className="text-xl text-white font-bold">
             Basic Framer Motion Animation
@@ -62,6 +66,22 @@ export default function Page() {
           </CodePreview>
         </div>
       </section>
+
+      <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4 mb-40">
+        <div className="space-y-4">
+          <h2 className="text-xl text-white font-bold">
+            Multiple Div Animations
+          </h2>
+          <CodePreview
+            className="bg-gray-700  h-[65vh] "
+            code={multipleDivText}
+            fileName="FramerMotionDiv.tsx"
+          >
+            <MultipleDivs />
+          </CodePreview>
+        </div>
+      </section>
+
     </div>
   );
 }

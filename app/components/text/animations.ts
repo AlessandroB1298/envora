@@ -10,22 +10,25 @@ export const basicDivAnimated =
   + '    const containerRef = useRef<HTMLDivElement>(null);' + '\n'
   + '' + '\n'
   + '    useGSAP(() => {' + '\n'
-  + '        const tl = gsap.timeline();' + '\n'
+  + '        const tl = gsap.timeline({' + '\n'
+  + '            yoyo: true,' + '\n'
+  + '            repeat: -1' + '\n'
+  + '        });' + '\n'
   + '        tl.fromTo(containerRef.current, {' + '\n'
-  + '            y: 300' + '\n'
+  + '            y: 300,' + '\n'
   + '        }, {' + '\n'
   + '            y: 50,' + '\n'
   + '            duration: 2,' + '\n'
-  + '            repeat: -1,' + '\n'
   + '            repeatDelay: 1,' + '\n'
-  + '            ease: "power2.inOut" // Using a standard GSAP ease instead of easeIn' + '\n'
+  + '            ease: "power2.inOut", // Using a standard GSAP ease instead of easeIn' + '\n'
   + '        },)' + '\n'
   + '' + '\n'
   + '    }, [])' + '\n'
   + '' + '\n'
   + '    return (' + '\n'
   + '        <div ref={containerRef}>' + '\n'
-  + '            <h2 className="text-white font-bold text-3xl">Some Animations</h2>' + '\n'
+  + '            <div className="h-[6rem] w-[7rem] bg-blue-300 flex flex-col items-center justify-center ">' + '\n'
+  + '            </div>' + '\n'
   + '' + '\n'
   + '        </div>' + '\n'
   + '    );' + '\n'
@@ -33,35 +36,78 @@ export const basicDivAnimated =
 
 
 export const framerAnimation =
-  "'use client;'" +
-  "\n" +
-  "import { motion } from 'motion/react';" +
-  "\n" +
-  "\n" +
-  "const BasicFramerMotion = () => {" +
-  "\n" +
-  "return (" +
-  "\n" +
-  "  <div>" +
-  "\n" +
-  "   <motion.h2" +
-  "\n" +
-  "    initial={{ y: 300 }}" +
-  "\n" +
-  "    transition={{ ease: 'easeOut', duration: 2, repeat : Infinity, repeatDelay : 1 }}" +
-  "\n" +
-  "    animate={{ y: 50 }}" +
-  "\n" +
-  "    className='text-white font-bold text-3xl'" +
-  "\n" +
-  " >" +
-  "\n" +
-  "  Some Animation" +
-  "\n" +
-  "</motion.h2>" +
-  "\n" +
-  "</div>" +
-  "\n" +
-  ");" +
-  "\n" +
-  "}";
+  '"use client";' + '\n'
+  + 'import { motion } from "motion/react";' + '\n'
+  + '' + '\n'
+  + 'const BasicFramerMotion = () => {' + '\n'
+  + '  return (' + '\n'
+  + '    <div>' + '\n'
+  + '      <motion.h2' + '\n'
+  + '        initial={{ y: 300 }}' + '\n'
+  + '        transition={{ ease: "easeOut", duration: 2, repeat: Infinity, repeatDelay: 0.5, repeatType: "mirror" }}' + '\n'
+  + '        animate={{ y: 50, }}' + '\n'
+  + '        className="h-[6rem] w-[7rem] bg-blue-300 flex flex-col items-center justify-center "' + '\n'
+  + '' + '\n'
+  + '      >' + '\n'
+  + '' + '\n'
+  + '      </motion.h2>' + '\n'
+  + '    </div>' + '\n'
+  + '  );' + '\n'
+  + '};' + '\n'
+  + 'export default BasicFramerMotion;'
+
+
+export const multipleDivText = '"use client"' + '\n'
+  + 'import { useGSAP } from "@gsap/react";' + '\n'
+  + 'import { gsap } from "gsap"' + '\n'
+  + 'import { useRef } from "react";' + '\n'
+  + '' + '\n'
+  + 'export const MultipleDivs = () => {' + '\n'
+  + '' + '\n'
+  + '  const ref1 = useRef<HTMLDivElement>(null)' + '\n'
+  + '  const ref2 = useRef<HTMLDivElement>(null)' + '\n'
+  + '  const ref3 = useRef<HTMLDivElement>(null)' + '\n'
+  + '  const parentRef = useRef<HTMLDivElement>(null)' + '\n'
+  + '  useGSAP(() => {' + '\n'
+  + '' + '\n'
+  + '    const tl = gsap.timeline({' + '\n'
+  + '      yoyo: true,      // This makes the timeline play in reverse when it completes' + '\n'
+  + '      repeat: -1,      // Infinite repetition' + '\n'
+  + '    });' + '\n'
+  + '' + '\n'
+  + '    tl.fromTo(parentRef.current, {' + '\n'
+  + '      y: 300' + '\n'
+  + '    }, {' + '\n'
+  + '      y: 50,' + '\n'
+  + '      duration: 1.2,' + '\n'
+  + '      ease: "power2.inOut",' + '\n'
+  + '    });' + '\n'
+  + '' + '\n'
+  + '    tl.fromTo(' + '\n'
+  + '      [ref1.current, ref2.current, ref3.current],' + '\n'
+  + '      {' + '\n'
+  + '        opacity: 0,' + '\n'
+  + '        scale: 0.5,' + '\n'
+  + '        y: 20' + '\n'
+  + '      },' + '\n'
+  + '      {' + '\n'
+  + '        opacity: 1,' + '\n'
+  + '        scale: 1,' + '\n'
+  + '        y: 0,' + '\n'
+  + '        duration: 1.2,' + '\n'
+  + '        stagger: 0.2, // This creates the staggered effect' + '\n'
+  + '        ease: "back.out(1.7)"' + '\n'
+  + '      },' + '\n'
+  + '      "-=1" // Start slightly before the parent animation finishes' + '\n'
+  + '    );' + '\n'
+  + '' + '\n'
+  + '' + '\n'
+  + '  }, { scope: parentRef })' + '\n'
+  + '  return (' + '\n'
+  + '    <div ref={parentRef} className="flex flex-row gap-3">' + '\n'
+  + '      <div className="h-[6rem] w-[7rem] bg-blue-300 flex flex-col items-center justify-center " ref={ref1}></div>' + '\n'
+  + '      <div className="h-[6rem] w-[7rem] bg-blue-300 flex flex-col items-center justify-center " ref={ref2}></div>' + '\n'
+  + '      <div className="h-[6rem] w-[7rem] bg-blue-300 flex flex-col items-center justify-center " ref={ref3}></div>' + '\n'
+  + '    </div>' + '\n'
+  + '  )' + '\n'
+  + '}'
