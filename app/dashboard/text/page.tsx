@@ -1,4 +1,4 @@
-import { CodePreview } from "@/app/components/code-preview";
+import { CodePreview } from "@/app/components/ui/codePreview";
 import Landing from "@/app/components/landingPage/landing";
 import { landingPageText, newDemoComponent } from "@/app/components/text/text";
 export default function Page() {

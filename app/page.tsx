@@ -2,7 +2,7 @@
 import gsap from 'gsap';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
-import { CodePreview } from './components/code-preview';
+import { CodePreview } from '@/app/components/ui/codePreview';
 import { basicButtonText } from './components/text/buttons';
 import { BasicButton } from './components/buttons/basicButton';
 
@@ -84,7 +84,7 @@ export default function Home() {
             <CodePreview
               className=" w-full h-[23rem] overflow-hidden bg-gray-900 "
               code={basicButtonText}
-              fileName="basicExample.tsx"
+              fileName="buttonBasicExample.tsx"
               color='bg-gray-800'
             >
               <BasicButton />

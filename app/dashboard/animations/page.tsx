@@ -1,5 +1,5 @@
-import CopyContainer from "@/app/components/copyButtonContainer";
-import { CodePreview } from "@/app/components/code-preview";
+import CopyContainer from "@/app/components/ui/copyButtonContainer";
+import { CodePreview } from "@/app/components/ui/codePreview";
 import { BasicAnimation } from "@/app/components/animations/basicAnimation";
 import BasicFramerMotion from "@/app/components/animations/basicFramerMotion";
 import {

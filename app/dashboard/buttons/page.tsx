@@ -1,5 +1,5 @@
-import { CodePreview } from "@/app/components/code-preview";
-import CopyContainer from "@/app/components/copyButtonContainer";
+import { CodePreview } from "@/app/components/ui/codePreview";
+import CopyContainer from "@/app/components/ui/copyButtonContainer";
 
 import { BasicButton } from "@/app/components/buttons/basicButton";
 import { RoundedButton } from "@/app/components/buttons/roundedButton";
