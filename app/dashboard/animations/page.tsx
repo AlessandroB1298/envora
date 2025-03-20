@@ -5,16 +5,15 @@ import BasicFramerMotion from "@/app/components/animations/basicFramerMotion";
 import {
   framerAnimation,
   basicDivAnimated,
-  multipleDivText,
 } from "@/app/components/text/animations";
 import { MultipleDivs } from "@/app/components/animations/multipleDivs";
 
 export default function Page() {
   return (
-    <div className=" ml-[25vw] space-y-6 mt-4  ">
+    <div className=" ml-[25vw] space-y-6   ">
       <section className=" flex flex-col">
         <div className="gap-2">
-          <h2 className=" text-4xl font-extrabold bg-gradient-to-br from-blue-700 to-white bg-clip-text text-transparent ">
+          <h2 className=" text-4xl mt-4 font-extrabold bg-gradient-to-br from-blue-700 to-white bg-clip-text text-transparent ">
 
             Animations</h2>
           <p className="w-1/2 mt-2 text-white opacity-20">
@@ -74,7 +73,7 @@ export default function Page() {
           </h2>
           <CodePreview
             className="bg-gray-700  h-[65vh] "
-            code={multipleDivText}
+            code={framerAnimation}
             fileName="FramerMotionDiv.tsx"
           >
             <MultipleDivs />

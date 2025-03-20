@@ -22,6 +22,7 @@ interface CodePreviewProps {
   language?: string;
   children: React.ReactNode;
   size?: string;
+  color?: string
 }
 
 export function CodePreview({
@@ -32,6 +33,7 @@ export function CodePreview({
   language = "tsx",
   children,
   size = "300px",
+  color = "bg-gray-600"
 }: CodePreviewProps) {
   const [activeTab, setActiveTab] = useState<string>("preview");
 
@@ -96,9 +98,6 @@ export function CodePreview({
 
           </TabsContent>
 
-
-
-
         </Tabs>
 
       ) : (
@@ -121,7 +120,8 @@ export function CodePreview({
             {children}
           </TabsContent>
           <TabsContent value="code" className="p-0">
-            <div className="p-4 rounded-md bg-gray-600  max-h-full m-3">
+            <div className={`p-4 rounded-md ${color} max-h-full m-`}>
+
               <SyntaxHighlighter
                 language={language}
                 style={vscDarkPlus}
