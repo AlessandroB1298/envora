@@ -1,18 +1,21 @@
 import { CodePreview } from "@/app/components/code-preview";
 import CopyContainer from "@/app/components/copyButtonContainer";
-import { buttonText, renderButtons } from "@/app/components/text/buttons";
-import { HoverButton, RoundedButton, RingButton, BasicButton } from "@/app/components/buttons/buttons";
 
+import { BasicButton } from "@/app/components/buttons/basicButton";
+import { RoundedButton } from "@/app/components/buttons/roundedButton";
+import { HoverButton } from "@/app/components/buttons/hoverButton";
+import { RingFocusedButton } from "@/app/components/buttons/ringFocused";
+import { ringFocusedButtonText, roundedButtonText, basicButtonText, hoverButtonText } from "@/app/components/text/buttons";
 
 export default function Page() {
   return (
-    <div className=" ml-[25vw] h-[100vh] overflow-y-auto space-y-6  ">
+    <div className=" ml-[25vw] overflow-y-auto space-y-6  ">
       <section className=" flex flex-col mt-5">
         <div className="gap-2">
           <h2 className=" text-4xl font-extrabold bg-gradient-to-br from-blue-300 to-white bg-clip-text text-transparent ">
             Buttons
           </h2>
-          <p className="w-3/4 mt-2 text-white opacity-20">
+          <p className="w-1/2 mt-2 text-white opacity-20">
             This page is designed to showcase some basic buttons and their
             properties, using tailwind for styling, however we must first look
             at how we comprise our button component
@@ -22,51 +25,64 @@ export default function Page() {
 
       <section className="mt-5">
         <div className="gap-2">
-          <p className="w-3/4 text-white opacity-20">
+          <p className="w-1/2 text-white opacity-20">
             Using Shadecn{"'s"} button component we can modify the button
             {"'s"} ui
           </p>
         </div>
-        <div className=" w-3/4">
+        <div className=" w-1/2">
           <CopyContainer copyText={"npx shadcn@latest add button"} />
         </div>
       </section>
 
       <section className="grid grid-cols-1 w-full gap-3">
         <div className="space-y-4">
-          <h2 className="text-xl text-white font-bold">Basic Buttons</h2>
+          <h2 className="text-xl text-white font-bold">Basic Button</h2>
           <CodePreview
-            className="bg-gray-700 h-[65vh]  w-3/4"
-            components={buttonText}
-            code={renderButtons}
-            fileName="basicButtons.tsx"
+            className="bg-gray-700 h-[300px] "
+            code={basicButtonText}
+            fileName="buttonBasicExample.tsx"
           >
-            <div className="grid grid-cols-4 gap-3">
-              <BasicButton />
-              <HoverButton />
-              <RoundedButton />
-              <RingButton />
-            </div>
+            <BasicButton />
+          </CodePreview>
+        </div>
 
+        <div className="space-y-4">
+          <h2 className="text-xl text-white font-bold">Hover Button</h2>
+          <CodePreview
+            className="bg-gray-700 h-[300px]"
+
+            code={hoverButtonText}
+
+            fileName="buttonHoverExample.tsx"
+          >
+            <HoverButton />
+          </CodePreview>
+        </div>
+
+        <div className="space-y-4 ">
+          <h2 className="text-xl text-white font-bold">Rounded</h2>
+          <CodePreview
+            className="bg-gray-700 h-[300px]"
+
+            code={roundedButtonText}
+
+            fileName="buttonRoundExample.tsx"
+          >
+            <RoundedButton />
           </CodePreview>
         </div>
 
 
-        <div className="space-y-4 mt-10 mb-24">
-          <h2 className="text-xl text-white font-bold">Action Buttons</h2>
-          <CodePreview
-            className="bg-gray-700 h-[65vh]  w-3/4"
-            components={buttonText}
-            code={renderButtons}
-            fileName="basicButtons.tsx"
-          >
-            <div className="grid grid-cols-4 gap-3">
-              <BasicButton />
-              <HoverButton />
-              <RoundedButton />
-              <RingButton />
-            </div>
 
+        <div className="space-y-4 mb-64">
+          <h2 className="text-xl text-white font-bold">Ring Focus</h2>
+          <CodePreview
+            className="bg-gray-700 h-[300px]"
+            code={ringFocusedButtonText}
+            fileName="buttonRoundExample.tsx"
+          >
+            <RingFocusedButton />
           </CodePreview>
         </div>
 
