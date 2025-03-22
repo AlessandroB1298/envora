@@ -5,6 +5,7 @@ import BasicFramerMotion from "@/app/components/animations/basicFramerMotion";
 import {
   framerAnimation,
   basicDivAnimated,
+  multipleDivText
 } from "@/app/components/text/animations";
 import { MultipleDivs } from "@/app/components/animations/multipleDivs";
 
@@ -73,8 +74,8 @@ export default function Page() {
           </h2>
           <CodePreview
             className="bg-gray-700  h-[65vh] "
-            code={framerAnimation}
-            fileName="FramerMotionDiv.tsx"
+            code={multipleDivText}
+            fileName="multpleDivAnimation.tsx"
           >
             <MultipleDivs />
           </CodePreview>

@@ -4,8 +4,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { CodePreview } from '@/app/components/ui/codePreview';
 import { basicButtonText } from './components/text/buttons';
-import { BasicButton } from './components/buttons/basicButton';
-
+import { WelcomeComponent } from './components/animations/welcomeComponent';
 
 gsap.registerPlugin(useGSAP); //register plugin to avoid react dependency issues 
 
@@ -15,9 +14,9 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
   const bodyContainerRef = useRef<HTMLDivElement>(null);
   const feature3Ref = useRef<HTMLDivElement>(null);
-
   const feature4Ref = useRef<HTMLDivElement>(null);
-  const feature5Ref = useRef<HTMLDivElement>(null);
+
+
 
 
   useGSAP(() => {
@@ -35,7 +34,7 @@ export default function Home() {
 
 
 
-    tl.fromTo([bodyContainerRef.current, feature3Ref.current, feature4Ref.current, feature5Ref.current], {
+    tl.fromTo([bodyContainerRef.current, feature3Ref.current, feature4Ref.current], {
       opacity: 0, // Fixed the typo here
       y: 20,
       scale: 0.5
@@ -84,10 +83,10 @@ export default function Home() {
             <CodePreview
               className=" w-full h-[23rem] overflow-hidden bg-gray-900 "
               code={basicButtonText}
-              fileName="buttonBasicExample.tsx"
+              fileName="welcomeComponent.tsx"
               color='bg-gray-800'
             >
-              <BasicButton />
+              <WelcomeComponent />
             </CodePreview>
           </div>
 
@@ -132,38 +131,34 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16 md:py-24 mb-24">
         <div ref={bodyContainerRef}>
 
-          <div ref={feature3Ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8  mx-auto">
-            <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
-              <div className="p-6">
-                <h2 className="text-xl font-bold text-gray-100 mb-4">Feature One</h2>
-                <p className="text-gray-300">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </p>
-              </div>
-            </div>
+          <div ref={feature3Ref} className="grid grid-cols-2 gap-8  mx-auto">
+            <div ref={feature4Ref}>
+              <CodePreview
 
-            <div ref={feature4Ref} className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
-              <div className="p-6">
-                <h2 className="text-xl font-bold text-gray-100 mb-4">Feature Two</h2>
-                <p className="text-gray-300">
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
-                </p>
-              </div>
-            </div>
-
-            <div ref={feature5Ref} className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500  hover:bg-gray-600 transition-all">
-              <div className="p-6">
-                <h2 className="text-xl font-bold text-gray-100 mb-4">Feature Three</h2>
-                <p className="text-gray-300">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-              </div>
+                className=" w-full h-[23rem] overflow-hidden bg-gray-900 "
+                code={basicButtonText}
+                fileName="welcomeComponent.tsx"
+                color='bg-gray-800'
+              >
+                <WelcomeComponent />
+              </CodePreview>
 
             </div>
+
+            <div className="bg-gray-700 h-[10rem] rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
+              <div className="p-6">
+                <h2 className="text-xl font-bold text-gray-100 mb-4">Custom First.</h2>
+                <p className="text-gray-300">
+                  This an example component that can be customized and easily modified,
+                  check <a href="/dashboard/docs" className="text-blue-300 cursor-pointer">this link</a> to learn more about how we make our components.
+                </p>
+
+              </div>
+
+
+            </div>
+
           </div>
-
         </div>
       </section>
     </div>
