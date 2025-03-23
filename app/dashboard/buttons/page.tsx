@@ -39,9 +39,11 @@ export default function Page() {
         <div className="space-y-4">
           <h2 className="text-xl text-white font-bold">Basic Button</h2>
           <CodePreview
-            className="bg-gray-700 h-[350px] "
+            className="bg-gray-800 h-[350px] "
             code={basicButtonText}
             fileName="buttonBasicExample.tsx"
+            color='bg-gray-800'
+
           >
             <BasicButton />
           </CodePreview>
@@ -50,7 +52,8 @@ export default function Page() {
         <div className="space-y-4">
           <h2 className="text-xl text-white font-bold">Hover Button</h2>
           <CodePreview
-            className="bg-gray-700 h-[350px]"
+            className="bg-gray-800 h-[350px]"
+            color='bg-gray-800'
 
             code={hoverButtonText}
 
@@ -63,9 +66,9 @@ export default function Page() {
         <div className="space-y-4 ">
           <h2 className="text-xl text-white font-bold">Rounded</h2>
           <CodePreview
-            className="bg-gray-700 h-[350px]"
-
+            className="bg-gray-800 h-[350px]"
             code={roundedButtonText}
+            color='bg-gray-800'
 
             fileName="buttonRoundExample.tsx"
           >
@@ -78,9 +81,11 @@ export default function Page() {
         <div className="space-y-4 mb-64">
           <h2 className="text-xl text-white font-bold">Ring Focus</h2>
           <CodePreview
-            className="bg-gray-700 h-[350px]"
+            className="bg-gray-800 h-[350px]"
             code={ringFocusedButtonText}
             fileName="buttonRoundExample.tsx"
+            color='bg-gray-800'
+
           >
             <RingFocusedButton />
           </CodePreview>

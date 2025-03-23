@@ -1,3 +1,4 @@
+"use client"
 import CopyContainer from "@/app/components/ui/copyButtonContainer";
 import { CodePreview } from "@/app/components/ui/codePreview";
 import { BasicAnimation } from "@/app/components/animations/basicAnimation";
@@ -10,6 +11,9 @@ import {
 import { MultipleDivs } from "@/app/components/animations/multipleDivs";
 
 export default function Page() {
+
+
+
   return (
     <div className=" ml-[25vw] space-y-6   ">
       <section className=" flex flex-col">
@@ -43,7 +47,9 @@ export default function Page() {
             Basic gsap Animation
           </h2>
           <CodePreview
-            className="bg-gray-700  h-[65vh] "
+            className="bg-gray-800  h-[65vh] "
+            color='bg-gray-800'
+
             code={basicDivAnimated}
             fileName="GsapDiv.tsx"
           >
@@ -58,7 +64,9 @@ export default function Page() {
             Basic Framer Motion Animation
           </h2>
           <CodePreview
-            className="bg-gray-700  h-[65vh] "
+            className="bg-gray-800  h-[65vh] "
+            color='bg-gray-800'
+
             code={framerAnimation}
             fileName="FramerMotionDiv.tsx"
           >
@@ -73,14 +81,17 @@ export default function Page() {
             Multiple Div Animations
           </h2>
           <CodePreview
-            className="bg-gray-700  h-[65vh] "
+            className="bg-gray-800  h-[65vh] "
             code={multipleDivText}
             fileName="multpleDivAnimation.tsx"
+            color='bg-gray-800'
+
           >
             <MultipleDivs />
           </CodePreview>
         </div>
       </section>
+
 
     </div>
   );

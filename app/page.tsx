@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { CodePreview } from '@/app/components/ui/codePreview';
 import { basicButtonText } from './components/text/buttons';
 import { WelcomeComponent } from './components/animations/welcomeComponent';
-
+import { welcome } from './components/text/welcome';
 gsap.registerPlugin(useGSAP); //register plugin to avoid react dependency issues 
 
 export default function Home() {
@@ -79,10 +79,10 @@ export default function Home() {
 
 
 
-          <div className="space-y-4 ">
+          <div className="space-y-4  ">
             <CodePreview
-              className=" w-full h-[23rem] overflow-hidden bg-gray-900 "
-              code={basicButtonText}
+              className=" w-full h-[26rem] overflow-hidden bg-gray-900 overflow-y-auto "
+              code={welcome}
               fileName="welcomeComponent.tsx"
               color='bg-gray-800'
             >

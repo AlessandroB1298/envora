@@ -60,7 +60,8 @@ export function CodePreview({
             {children}
           </TabsContent>
           <TabsContent value="code" className="p-0">
-            <div className="p-4 rounded-md bg-gray-600  max-h-full m-3">
+            <div className={`p-4 rounded-md ${color} m-3 max-h-full`}>
+
               <SyntaxHighlighter
                 language={language}
                 style={vscDarkPlus}
@@ -68,7 +69,7 @@ export function CodePreview({
                   background: "transparent",
                   margin: 0,
                   width: `full`,
-                  fontSize: "10px"
+
                 }}
                 showLineNumbers
               >
@@ -80,7 +81,8 @@ export function CodePreview({
 
 
           <TabsContent value="components" className="p-0">
-            <div className="p-4 rounded-md bg-gray-600  max-h-full m-3">
+            <div className={`p-4 rounded-md ${color} max-h-full m-3`}>
+
               <SyntaxHighlighter
                 language={language}
                 style={vscDarkPlus}
@@ -88,7 +90,7 @@ export function CodePreview({
                   background: "transparent",
                   margin: 0,
                   width: `full`,
-                  fontSize: "10px"
+
                 }}
                 showLineNumbers
               >
@@ -120,16 +122,16 @@ export function CodePreview({
             {children}
           </TabsContent>
           <TabsContent value="code" className="p-0">
-            <div className={`p-4 rounded-md ${color} max-h-full m-`}>
+            <div className={`p-4 rounded-md ${color} max-h-full`}>
 
               <SyntaxHighlighter
                 language={language}
+
                 style={vscDarkPlus}
                 customStyle={{
                   background: "transparent",
                   margin: 0,
-                  width: `full`,
-                  fontSize: "10px"
+                  width: `100%`
                 }}
                 showLineNumbers
               >
