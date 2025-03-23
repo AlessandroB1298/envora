@@ -3,9 +3,10 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { CodePreview } from '@/app/components/ui/codePreview';
-import { basicButtonText } from './components/text/buttons';
 import { WelcomeComponent } from './components/animations/welcomeComponent';
 import { welcome } from './components/text/welcome';
+import { BasicGsapAnimation } from './components/custom/basicAnimation';
+import { basicComponent, basicWelcomeCode } from './components/text/welcome';
 gsap.registerPlugin(useGSAP); //register plugin to avoid react dependency issues 
 
 export default function Home() {
@@ -55,12 +56,12 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className=" grid grid-cols-2 text-left mt-3 ">
           <h1 className=" flex flex-col  text-gray-100 font-bold mb-2">
-            <span className="text-5xl">
+            <span className="text-4xl">
               Build Beautifully,
 
             </span>
             <span
-              className=" text-5xl  font-extrabold bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent"
+              className=" text-4xl  font-extrabold bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent"
             >
               Create with Envora
             </span>
@@ -79,16 +80,23 @@ export default function Home() {
 
 
 
-          <div className="space-y-4  ">
-            <CodePreview
-              className=" w-full h-[26rem] overflow-hidden bg-gray-900 overflow-y-auto "
-              code={welcome}
-              fileName="welcomeComponent.tsx"
-              color='bg-gray-800'
+          <CodePreview
+            className=" w-[38.5vw] h-[26rem] bg-gray-900 overflow-y-auto "
+            code={basicWelcomeCode}
+            components={basicComponent}
+            fileName="welcomeComponent.tsx"
+            color='bg-gray-800'
+
+          >
+            <BasicGsapAnimation
+              customStyles='flex flex-row gap-2'
             >
-              <WelcomeComponent />
-            </CodePreview>
-          </div>
+              <h2 className="bg-white bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent text-4xl font-bold ">Welcome</h2>
+              <h2 className="bg-white bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent text-4xl font-bold ">to</h2>
+              <h2 className="bg-white bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent text-4xl font-bold ">the</h2>
+              <h2 className="bg-white bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent text-4xl font-bold ">Site</h2>
+            </BasicGsapAnimation>
+          </CodePreview>
 
         </div>
 
@@ -136,7 +144,8 @@ export default function Home() {
               <CodePreview
 
                 className=" w-full h-[23rem] overflow-hidden bg-gray-900 "
-                code={basicButtonText}
+                code={welcome}
+
                 fileName="welcomeComponent.tsx"
                 color='bg-gray-800'
               >

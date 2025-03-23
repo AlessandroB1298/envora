@@ -68,7 +68,7 @@ export function CodePreview({
                 customStyle={{
                   background: "transparent",
                   margin: 0,
-                  width: `full`,
+                  width: `100%`,
 
                 }}
                 showLineNumbers
@@ -81,7 +81,7 @@ export function CodePreview({
 
 
           <TabsContent value="components" className="p-0">
-            <div className={`p-4 rounded-md ${color} max-h-full m-3`}>
+            <div className={`p-4 rounded-md ${color} max-h-full`}>
 
               <SyntaxHighlighter
                 language={language}
@@ -89,7 +89,7 @@ export function CodePreview({
                 customStyle={{
                   background: "transparent",
                   margin: 0,
-                  width: `full`,
+                  width: `50%`,
 
                 }}
                 showLineNumbers
