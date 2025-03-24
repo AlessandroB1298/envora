@@ -49,7 +49,7 @@ export function CodePreview({
             {fileName && (
               <p className="text-sm text-muted-foreground py-3">{fileName}</p>
             )}
-            <TabsList className="grid grid-cols-3 w-[400px]  my-2">
+            <TabsList className="grid grid-cols-3 w-[350px]  my-2">
               <TabsTrigger value="preview">Preview</TabsTrigger>
               <TabsTrigger value="code">Code</TabsTrigger>
               <TabsTrigger value="components">Components</TabsTrigger>
@@ -89,7 +89,7 @@ export function CodePreview({
                 customStyle={{
                   background: "transparent",
                   margin: 0,
-                  width: `50%`,
+                  width: `100%`,
 
                 }}
                 showLineNumbers

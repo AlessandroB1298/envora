@@ -15,13 +15,13 @@ const SideNav = () => {
       <div className="mt-4">
         <Link
           href={"/"}
-          className="text-3xl  w-full mt-[100px] font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-700 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+          className="text-3xl ml-2  w-full mt-[100px] font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-700 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
         >
           ENVORA
         </Link>
       </div>
       <div className="border-b border-dotted border-gray-500/50 w-[90%] my-2 md:p-3 sm-p-2"></div>
-      <ul className="flex flex-col gap-3 mt-3 text-white space-y-2 w-[90%] sm">
+      <ul className="flex flex-col ml-2 gap-3 mt-3 text-white space-y-2 w-[90%] sm">
         <div className="flex flex-row hover:bg-gray-600/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-700/70 backdrop-blur-sm">
           <MousePointer className="text-blue-400" />
           <Link

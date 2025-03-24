@@ -102,7 +102,7 @@ export default function Home() {
 
         <div ref={containerRef}>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 sm:grid-cols-1 gap-8  mx-auto">
-            <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
+            <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 hover:translate-y-1 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">Copy & Paste Components</h2>
                 <p className="text-gray-300">
@@ -111,7 +111,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
+            <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:translate-y-1 hover:bg-gray-600 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">ShadeCn, GSAP, and FramerMotion</h2>
                 <p className="text-gray-300">
@@ -121,7 +121,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500  hover:bg-gray-600 transition-all">
+            <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500  hover:translate-y-1 hover:bg-gray-600 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">Light Weight and Resuable</h2>
                 <p className="text-gray-300">
@@ -154,7 +154,7 @@ export default function Home() {
 
             </div>
 
-            <div className="bg-gray-700 h-[10rem] rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:border-gray-500 hover:bg-gray-600 transition-all">
+            <div className="bg-gray-700 h-[10rem] rounded-lg shadow-lg overflow-hidden border border-gray-600 hover:translate-y-1 hover:border-gray-500 hover:bg-gray-600 transition-all">
               <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-100 mb-4">Custom First.</h2>
                 <p className="text-gray-300">

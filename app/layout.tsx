@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SideNav from "./components/nav/sideNav";
+
+
+
 export const metadata: Metadata = {
   title: "Evora",
   description: "fun and easy component-esk lib",
@@ -8,6 +11,7 @@ export const metadata: Metadata = {
     icon: "icon.svg"
   }
 };
+
 
 export default function RootLayout({
   children,
@@ -19,7 +23,7 @@ export default function RootLayout({
       <head>
 
       </head>
-      <body className=" h-full w-full items-center justify-items-center">
+      <body className={`  h-full w-full items-center justify-items-center`}>
         <SideNav />
         {children}
 
