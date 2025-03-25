@@ -47,7 +47,7 @@ export default function Page() {
             Basic gsap Animation
           </h2>
           <CodePreview
-            className="bg-gray-800  h-[65vh] "
+            className="bg-gray-800 overflow-hidden  h-[48vh] "
             color='bg-gray-800'
 
             code={basicDivAnimated}
@@ -64,7 +64,7 @@ export default function Page() {
             Basic Framer Motion Animation
           </h2>
           <CodePreview
-            className="bg-gray-800  h-[65vh] "
+            className="bg-gray-800  h-[48vh] "
             color='bg-gray-800'
 
             code={framerAnimation}
@@ -81,7 +81,7 @@ export default function Page() {
             Multiple Div Animations
           </h2>
           <CodePreview
-            className="bg-gray-800  h-[65vh] "
+            className="bg-gray-800  h-[48vh] "
             code={multipleDivText}
             fileName="multpleDivAnimation.tsx"
             color='bg-gray-800'

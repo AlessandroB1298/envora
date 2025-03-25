@@ -3,10 +3,10 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { CodePreview } from '@/app/components/ui/codePreview';
-import { WelcomeComponent } from './components/animations/welcomeComponent';
 import { welcome } from './components/text/welcome';
 import { BasicGsapAnimation } from './components/custom/basicAnimation';
 import { basicComponent, basicWelcomeCode } from './components/text/welcome';
+import { BasicFramerAnimation } from './components/custom/basicFramer';
 gsap.registerPlugin(useGSAP); //register plugin to avoid react dependency issues 
 
 export default function Home() {
@@ -149,7 +149,16 @@ export default function Home() {
                 fileName="welcomeComponent.tsx"
                 color='bg-gray-800'
               >
-                <WelcomeComponent />
+                <BasicFramerAnimation
+                  customStyle='flex flex-row gap-2'
+                >
+                  <h2 className="bg-white bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent text-4xl font-bold ">Welcome</h2>
+                  <h2 className="bg-white bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent text-4xl font-bold ">to</h2>
+                  <h2 className="bg-white bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent text-4xl font-bold ">the</h2>
+                  <h2 className="bg-white bg-gradient-to-br from-blue-800 to-white bg-clip-text text-transparent text-4xl font-bold ">Site</h2>
+
+
+                </BasicFramerAnimation>
               </CodePreview>
 
             </div>
