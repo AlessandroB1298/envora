@@ -1,32 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Envora
+
 
 ## Getting Started
 
 This app is meant to show users how to use platforms like framer motion, gsap, and others by giving
 different examples for component snippets.
 
-## Sections
+### Custom First
 
-### Buttons
+This applicaiton is used to create custom and reusable components, built on top of other
+ui libraries.
 
-```
-Showcasing different button components that anyone can use!
-```
 
-### Animations
+### Make it Easy
 
-```
-Some very basic animations that can be used on most components
-```
+Fun components and animations that can be used anywhere in your application.
 
-### Text
 
-```
-Animations desgined for text, again anyone can use!
-```
+### Backed With
+- [ ] ShadeCn
+- [ ] GSAP
+- [ ] Framer Motion
+- [ ] MagicUI
 
-### Forms
 
-```
-Some cool designs for forms, showcasing differnt layouts!
-```
