@@ -17,7 +17,7 @@ ui libraries.
 Fun components and animations that can be used anywhere in your application.
 
 
-### Backed With
+### Using:
 - [ ] ShadeCn
 - [ ] GSAP
 - [ ] Framer Motion
