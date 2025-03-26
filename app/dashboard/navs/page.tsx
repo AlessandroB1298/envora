@@ -24,7 +24,7 @@ export default function Page() {
             color='bg-gray-800'
 
             code={""}
-            fileName="GsapDiv.tsx"
+            fileName="BasicNav.tsx"
           >
             <BasicNav />
           </CodePreview>
@@ -39,11 +39,14 @@ export default function Page() {
             color='bg-gray-800'
 
             code={""}
-            fileName="GsapDiv.tsx"
+            fileName="BasicDropDownNav.tsx"
           >
             <BasicDropDownNav />
           </CodePreview>
         </div>
+
+
+
 
       </section>
 
