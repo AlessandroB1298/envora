@@ -1,7 +1,7 @@
 
 
 
-export const BasicNav = () => {
+export const StaticBasicNav = () => {
   return (
     <div className="w-full h-full flex ">
       <div className="w-full">

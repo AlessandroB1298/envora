@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SideNav from "./components/nav/sideNav";
+import SideNav from "./components/ui/sideNav";
 
 
 
