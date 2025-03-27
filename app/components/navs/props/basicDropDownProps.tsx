@@ -3,13 +3,13 @@ import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 
 type basicNav = {
-  headers: string[]; // Changed from Array<string[]> to string[]
+  headers: string[];
   logo: string;
   title: string;
-  subItems: string[]; // Assuming children is also meant to be a simple string array
+  subItems: string[];
 };
 
-export const DropDownWithProps = ({ headers, logo, title, subItems }: basicNav) => {
+export const DropDownWithProps: React.FC<basicNav> = ({ headers, logo, title, subItems }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   return (
     <div className="w-full h-full flex ">
