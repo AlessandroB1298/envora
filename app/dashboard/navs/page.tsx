@@ -1,8 +1,8 @@
-import {StaticBasicNav} from "@/app/components/navs/static/staticBasicNav";
+import { StaticBasicNav } from "@/app/components/navs/static/staticBasicNav";
 import { CodePreview } from "@/app/components/ui/codePreview"
-import {DropDownWithProps} from "@/app/components/navs/props/basicDropDownProps";
-import {BasicNav} from "@/app/components/navs/props/basicNavProps";
-import {BasicDropDownNav} from "@/app/components/navs/static/dropdownNav";
+import { DropDownWithProps } from "@/app/components/navs/props/basicDropDownProps";
+import { BasicNav } from "@/app/components/navs/props/basicNavProps";
+import { BasicDropDownNav } from "@/app/components/navs/static/dropdownNav";
 import { basicDropDropPropsText, basicStaticNavText, basicNavPropsText, basicStaticDropdownNavText } from "@/app/components/text/nav"
 export default function Page() {
   return (
@@ -17,6 +17,7 @@ export default function Page() {
           </p>
         </div>
       </section>
+
       <section className="grid grid-cols-1">
         <div className="space-y-4">
           <h2 className="text-xl text-white font-bold">
@@ -32,6 +33,7 @@ export default function Page() {
             <StaticBasicNav />
           </CodePreview>
         </div>
+
 
         <div className="space-y-4 mb-10 mt-5">
           <h2 className="text-xl text-white font-bold">
@@ -51,21 +53,23 @@ export default function Page() {
 
         <div className="space-y-4 mb-10 mt-5">
           <h2 className="text-xl text-white font-bold">
-            Basic Props Nav
+            Basic Nav With Props
           </h2>
           <CodePreview
-            className="bg-gray-800 overflow-y-auto h-[48vh] "
+            className="bg-gray-800 overflow-y-auto  h-[48vh] "
             color='bg-gray-800'
 
             code={basicNavPropsText}
-            fileName="BasicPropsNav.tsx"
+            fileName="BasicDropDownNav.tsx"
           >
             <BasicNav
               titles={["Home", "About", "Docs", "Contact"]}
               logo={"LOGO"}
+
             />
           </CodePreview>
         </div>
+
 
         <div className="space-y-4 mb-10 mt-5">
           <h2 className="text-xl text-white font-bold">
