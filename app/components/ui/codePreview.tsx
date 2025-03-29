@@ -13,6 +13,8 @@ import {
   TabsTrigger,
 } from "@/app/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import { Copy } from "lucide-react";
+
 
 interface CodePreviewProps {
   code: string;
@@ -24,6 +26,8 @@ interface CodePreviewProps {
   size?: string;
   color?: string
 }
+
+
 
 export function CodePreview({
   code,
@@ -37,6 +41,13 @@ export function CodePreview({
 }: CodePreviewProps) {
   const [activeTab, setActiveTab] = useState<string>("preview");
 
+  const handleClick = (e: string) => {
+    try {
+      navigator.clipboard.writeText(e);
+    } catch (err) {
+      console.error(err);
+    }
+  }
   return (
     <Card className={cn(` overflow-hidden overflow-y-auto  w-${size}`, className)}>
       {components != "" ? (
@@ -49,6 +60,13 @@ export function CodePreview({
             {fileName && (
               <p className="text-sm text-muted-foreground py-3">{fileName}</p>
             )}
+            <Copy
+              onClick={() => {
+                handleClick(code + components);
+              }}
+              className="text-white/30 hover:text-white/60 mr-12"
+            />
+
             <TabsList className="grid grid-cols-3 w-[350px]  my-2">
               <TabsTrigger value="preview">Preview</TabsTrigger>
               <TabsTrigger value="code">Code</TabsTrigger>
@@ -112,6 +130,12 @@ export function CodePreview({
             {fileName && (
               <p className="text-sm text-muted-foreground py-3">{fileName}</p>
             )}
+            <Copy
+              onClick={() => {
+                handleClick(code);
+              }}
+              className="text-white/30 hover:text-white/60 mr-[30vw]"
+            />
             <TabsList className="grid grid-cols-2 w-[200px]  my-2">
               <TabsTrigger value="preview">Preview</TabsTrigger>
               <TabsTrigger value="code">Code</TabsTrigger>
@@ -122,8 +146,7 @@ export function CodePreview({
             {children}
           </TabsContent>
           <TabsContent value="code" className="p-0">
-            <div className={`p-4 rounded-md ${color} max-h-full`}>
-
+            <div className={`p-4 rounded-md ${color} max-h-full `}>
               <SyntaxHighlighter
                 language={language}
 
@@ -137,6 +160,7 @@ export function CodePreview({
               >
                 {code}
               </SyntaxHighlighter>
+
             </div>
 
           </TabsContent>

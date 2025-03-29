@@ -19,7 +19,7 @@ export default function Page() {
         <div className="space-y-4">
           <h2 className="text-xl text-white font-bold">Landing Page</h2>
           <CodePreview
-            className="bg-gray-800  h-[65vh] "
+            className="bg-gray-800  h-[48vh] "
             color='bg-gray-800'
             code={landingPageText}
             components={newDemoComponent}

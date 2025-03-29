@@ -32,7 +32,7 @@ export default function Page() {
       <section className="mt-5">
         <div className="gap-2">
           <p className="w-1/2 text-white opacity-20">
-            Using gsap{"'s"} useGSap hook and framer motion we can add a simple
+            Using gsap{"'s"} useGSAP hook and framer motion we can add a simple
             animations
           </p>
         </div>
