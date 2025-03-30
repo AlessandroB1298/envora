@@ -32,7 +32,7 @@ export default function Page() {
       <section className="mt-5">
         <div className="gap-2">
           <p className="w-1/2 text-white opacity-20">
-            Using gsap{"'s"} useGSAP hook and framer motion we can add a simple
+            Using gsap{"'s"} useGSap hook and framer motion we can add a simple
             animations
           </p>
         </div>
@@ -41,14 +41,14 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="grid  mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
+      <section className="grid   mt-10 h grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
         <div className="space-y-4">
           <h2 className="text-xl text-white font-bold">
             Basic gsap Animation
           </h2>
           <CodePreview
-            className="bg-gray-800 overflow-hidden  h-[48vh] "
-            color='bg-gray-800'
+            className="bg-gray-900 overflow-y-auto  h-[48vh] "
+            color='bg-gray-900'
 
             code={basicDivAnimated}
             fileName="GsapDiv.tsx"
@@ -64,8 +64,8 @@ export default function Page() {
             Basic Framer Motion Animation
           </h2>
           <CodePreview
-            className="bg-gray-800  h-[48vh] "
-            color='bg-gray-800'
+            className="bg-gray-900  h-[48vh] "
+            color='bg-gray-900'
 
             code={framerAnimation}
             fileName="FramerMotionDiv.tsx"
@@ -81,10 +81,10 @@ export default function Page() {
             Multiple Div Animations
           </h2>
           <CodePreview
-            className="bg-gray-800  h-[48vh] "
+            className="bg-gray-900  h-[48vh] "
             code={multipleDivText}
             fileName="multpleDivAnimation.tsx"
-            color='bg-gray-800'
+            color='bg-gray-900'
 
           >
             <MultipleDivs />

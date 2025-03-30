@@ -9,7 +9,7 @@ import {
 const SideNav = () => {
 
   return (
-    <div className="h-[100vh] lg:w-[15.2vw] md:w-[23.5vw]  md:pl-2  fixed  pl-5 overflow-auto z-10 bg-gradient-to-b from-[#213352] to-black/60 border-r border-gray-600/30 shadow-[5px_0_15px_rgba(0,0,0,0.2)]">
+    <div className="h-[100%] lg:w-[15.2vw] md:w-[23.5vw]  md:pl-2  fixed  pl-5  z-10 bg-gradient-to-b from-[#213352] to-black/60 border-r border-gray-600/30 shadow-[5px_0_15px_rgba(0,0,0,0.2)]">
 
 
 

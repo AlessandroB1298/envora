@@ -37,7 +37,7 @@ export function CodePreview({
   language = "tsx",
   children,
   size = "300px",
-  color = "bg-gray-600"
+  color = "bg-gray-900"
 }: CodePreviewProps) {
   const [activeTab, setActiveTab] = useState<string>("preview");
 
@@ -56,7 +56,7 @@ export function CodePreview({
           value={activeTab}
           onValueChange={setActiveTab}
         >
-          <div className="flex  items-center justify-between border-b px-4">
+          <div className="flex items-center justify-between border-b px-4">
             {fileName && (
               <p className="text-sm text-muted-foreground py-3">{fileName}</p>
             )}
@@ -64,10 +64,10 @@ export function CodePreview({
               onClick={() => {
                 handleClick(code + components);
               }}
-              className="text-white/30 hover:text-white/60 mr-12"
+              className="text-white/30 hover:text-white/60 lg:mr-24 md:mr-20"
             />
 
-            <TabsList className="grid grid-cols-3 w-[350px]  my-2">
+            <TabsList className="grid grid-cols-3 w-[350px] md:w-[290px] my-2">
               <TabsTrigger value="preview">Preview</TabsTrigger>
               <TabsTrigger value="code">Code</TabsTrigger>
               <TabsTrigger value="components">Components</TabsTrigger>
@@ -134,9 +134,9 @@ export function CodePreview({
               onClick={() => {
                 handleClick(code);
               }}
-              className="text-white/30 hover:text-white/60 mr-[30vw]"
+              className="text-white/30 hover:text-white/60 mr-[34vw]"
             />
-            <TabsList className="grid grid-cols-2 w-[200px]  my-2">
+            <TabsList className="grid grid-cols-2 w-[200px] my-2">
               <TabsTrigger value="preview">Preview</TabsTrigger>
               <TabsTrigger value="code">Code</TabsTrigger>
 

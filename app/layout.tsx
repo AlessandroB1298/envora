@@ -23,11 +23,11 @@ export default function RootLayout({
       <head>
 
       </head>
-      <body className={`  h-full w-full items-center justify-items-center`}>
+      <body>
         <SideNav />
         {children}
 
       </body>
-    </html>
+    </html >
   );
 }

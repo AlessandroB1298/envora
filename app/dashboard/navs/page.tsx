@@ -7,7 +7,7 @@ import { basicDropDropPropsText, basicStaticNavText, basicNavPropsText, basicSta
 export default function Page() {
   return (
     <div className=" ml-[25vw] space-y-6 h-full ">
-      <section className=" flex flex-col mt-5">
+      <section className=" flex flex-col ">
         <div className="gap-2">
           <h2 className="text-4xl font-extrabold bg-gradient-to-br from-blue-700 to-white bg-clip-text text-transparent ">Navs</h2>
           <p className="w-1/2 mt-2 text-white opacity-20">
@@ -24,8 +24,8 @@ export default function Page() {
             Basic Static Nav
           </h2>
           <CodePreview
-            className="bg-gray-800 overflow-y-auto  h-[48vh] "
-            color='bg-gray-800'
+            className="bg-gray-900 overflow-y-auto  h-[48vh] "
+            color='bg-gray-900'
 
             code={basicStaticNavText}
             fileName="StaticBasicNav.tsx"
@@ -40,8 +40,8 @@ export default function Page() {
             Basic Static Dropdown Nav
           </h2>
           <CodePreview
-            className="bg-gray-800 overflow-y-auto  h-[48vh] "
-            color='bg-gray-800'
+            className="bg-gray-900 overflow-y-auto  h-[48vh] "
+            color='bg-gray-900'
 
             code={basicStaticDropdownNavText}
             fileName="BasicDropDownNav.tsx"
@@ -56,8 +56,8 @@ export default function Page() {
             Basic Nav With Props
           </h2>
           <CodePreview
-            className="bg-gray-800 overflow-y-auto  h-[48vh] "
-            color='bg-gray-800'
+            className="bg-gray-900 overflow-y-auto  h-[48vh] "
+            color='bg-gray-900'
 
             code={basicNavPropsText}
             fileName="BasicDropDownNav.tsx"
@@ -76,8 +76,8 @@ export default function Page() {
             Basic Dropdown Nav Props
           </h2>
           <CodePreview
-            className="bg-gray-800 overflow-y-auto  h-[48vh] "
-            color='bg-gray-800'
+            className="bg-gray-900 overflow-y-auto  h-[48vh] "
+            color='bg-gray-900'
 
             code={basicDropDropPropsText}
             fileName="BasicPropsNav.tsx"
