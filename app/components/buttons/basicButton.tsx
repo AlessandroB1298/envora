@@ -7,7 +7,6 @@ export const BasicButton = () => {
       <Button className="bg-white w-[8rem] h-[2.5rem] text-black hover:bg-gray-300">
         Click me
       </Button>
-
     </div>
 
   )

@@ -1,11 +1,16 @@
 import { CodePreview } from "@/app/components/ui/codePreview";
-import CopyContainer from "@/app/components/ui/copyButtonContainer";
+import CopyContainer from "@/app/components/custom/copyButtonContainer";
 
 import { BasicButton } from "@/app/components/buttons/basicButton";
 import { RoundedButton } from "@/app/components/buttons/roundedButton";
 import { HoverButton } from "@/app/components/buttons/hoverButton";
 import { RingFocusedButton } from "@/app/components/buttons/ringFocused";
-import { ringFocusedButtonText, roundedButtonText, basicButtonText, hoverButtonText } from "@/app/components/text/buttons";
+import {
+  ringFocusedButtonText,
+  roundedButtonText,
+  basicButtonText,
+  hoverButtonText,
+} from "@/app/components/text/buttons";
 
 export default function Page() {
   return (
@@ -42,8 +47,7 @@ export default function Page() {
             className="bg-gray-900 h-[350px] "
             code={basicButtonText}
             fileName="buttonBasicExample.tsx"
-            color='bg-gray-900'
-
+            color="bg-gray-900"
           >
             <BasicButton />
           </CodePreview>
@@ -53,10 +57,8 @@ export default function Page() {
           <h2 className="text-xl text-white font-bold">Hover Button</h2>
           <CodePreview
             className="bg-gray-900 h-[350px]"
-            color='bg-gray-900'
-
+            color="bg-gray-900"
             code={hoverButtonText}
-
             fileName="buttonHoverExample.tsx"
           >
             <HoverButton />
@@ -68,15 +70,12 @@ export default function Page() {
           <CodePreview
             className="bg-gray-900 h-[350px]"
             code={roundedButtonText}
-            color='bg-gray-900'
-
+            color="bg-gray-900"
             fileName="buttonRoundExample.tsx"
           >
             <RoundedButton />
           </CodePreview>
         </div>
-
-
 
         <div className="space-y-4 mb-64">
           <h2 className="text-xl text-white font-bold">Ring Focus</h2>
@@ -84,18 +83,12 @@ export default function Page() {
             className="bg-gray-900 h-[350px]"
             code={ringFocusedButtonText}
             fileName="buttonRoundExample.tsx"
-            color='bg-gray-900'
-
+            color="bg-gray-900"
           >
             <RingFocusedButton />
           </CodePreview>
         </div>
-
-
-
       </section>
-
-
     </div>
   );
 }

@@ -15,7 +15,6 @@ import {
 import { cn } from "@/lib/utils";
 import { Copy } from "lucide-react";
 
-
 interface CodePreviewProps {
   code: string;
   components?: string;
@@ -24,10 +23,8 @@ interface CodePreviewProps {
   language?: string;
   children: React.ReactNode;
   size?: string;
-  color?: string
+  color?: string;
 }
-
-
 
 export function CodePreview({
   code,
@@ -37,7 +34,7 @@ export function CodePreview({
   language = "tsx",
   children,
   size = "300px",
-  color = "bg-gray-900"
+  color = "bg-gray-900",
 }: CodePreviewProps) {
   const [activeTab, setActiveTab] = useState<string>("preview");
 
@@ -47,9 +44,12 @@ export function CodePreview({
     } catch (err) {
       console.error(err);
     }
-  }
+  };
+
   return (
-    <Card className={cn(` overflow-hidden overflow-y-auto  w-${size}`, className)}>
+    <Card
+      className={cn(` overflow-hidden overflow-y-auto  w-${size}`, className)}
+    >
       {components != "" ? (
         <Tabs
           defaultValue="preview"
@@ -64,14 +64,13 @@ export function CodePreview({
               onClick={() => {
                 handleClick(code + components);
               }}
-              className="text-white/30 hover:text-white/60 lg:mr-24 md:mr-20"
+              className="text-white/30 hover:text-white/60 w-10 lg:mr-24 md:mr-10"
             />
 
-            <TabsList className="grid grid-cols-3 w-[350px] md:w-[290px] my-2">
+            <TabsList className="grid grid-cols-3 w-[350px] md:w-[320px] my-2">
               <TabsTrigger value="preview">Preview</TabsTrigger>
               <TabsTrigger value="code">Code</TabsTrigger>
               <TabsTrigger value="components">Components</TabsTrigger>
-
             </TabsList>
           </div>
           <TabsContent value="preview" className="p-4 rounded-md">
@@ -79,7 +78,6 @@ export function CodePreview({
           </TabsContent>
           <TabsContent value="code" className="p-0">
             <div className={`p-4 rounded-md ${color} m-3 max-h-full`}>
-
               <SyntaxHighlighter
                 language={language}
                 style={vscDarkPlus}
@@ -87,20 +85,16 @@ export function CodePreview({
                   background: "transparent",
                   margin: 0,
                   width: `100%`,
-
                 }}
                 showLineNumbers
               >
                 {code}
               </SyntaxHighlighter>
             </div>
-
           </TabsContent>
-
 
           <TabsContent value="components" className="p-0">
             <div className={`p-4 rounded-md ${color} max-h-full`}>
-
               <SyntaxHighlighter
                 language={language}
                 style={vscDarkPlus}
@@ -108,18 +102,14 @@ export function CodePreview({
                   background: "transparent",
                   margin: 0,
                   width: `100%`,
-
                 }}
                 showLineNumbers
               >
                 {components}
               </SyntaxHighlighter>
             </div>
-
           </TabsContent>
-
         </Tabs>
-
       ) : (
         <Tabs
           defaultValue="preview"
@@ -139,7 +129,6 @@ export function CodePreview({
             <TabsList className="grid grid-cols-2 w-[200px] my-2">
               <TabsTrigger value="preview">Preview</TabsTrigger>
               <TabsTrigger value="code">Code</TabsTrigger>
-
             </TabsList>
           </div>
           <TabsContent value="preview" className="p-4 rounded-md">
@@ -149,24 +138,19 @@ export function CodePreview({
             <div className={`p-4 rounded-md ${color} max-h-full `}>
               <SyntaxHighlighter
                 language={language}
-
                 style={vscDarkPlus}
                 customStyle={{
                   background: "transparent",
                   margin: 0,
-                  width: `100%`
+                  width: `100%`,
                 }}
                 showLineNumbers
               >
                 {code}
               </SyntaxHighlighter>
-
             </div>
-
           </TabsContent>
-
         </Tabs>
-
       )}
     </Card>
   );
