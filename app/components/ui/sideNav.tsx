@@ -7,6 +7,21 @@ import {
   Play,
   Clipboard,
   Compass,
+  Atom,
+  Box,
+  BringToFront,
+  ChevronsLeftRight,
+  CodeXml,
+  Earth,
+  PanelBottom,
+  PanelsLeftBottom,
+  PanelsTopLeft,
+  SquarePen,
+  SquareSlash,
+  PencilLine,
+  ChevronsRight,
+  ChevronsDown,
+  ArrowRightFromLine,
 } from "lucide-react";
 
 const SideNav = () => {
@@ -43,20 +58,20 @@ const SideNav = () => {
         {openButton && (
           <ul className="ml-3">
             <div className="flex flex-row m-1 gap-2 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem]  items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <Atom className="text-blue-400" />
+              <Link className="w-full" href={"/dashboard/buttons/basic"}>
                 Basic
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <Box className="text-blue-400" />
+              <Link className="w-full" href={"#"}>
                 Animated
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <BringToFront className="text-blue-400" />
+              <Link className="w-full" href={"#"}>
                 Special
               </Link>
             </div>
@@ -78,20 +93,20 @@ const SideNav = () => {
         {openAnimations && (
           <ul className="ml-3">
             <div className="flex flex-row m-1 gap-2 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem]  items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <ChevronsLeftRight className="text-green-400" />
+              <Link className="w-full" href={"/dashboard/animations/basic"}>
                 Basic
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <CodeXml className="text-green-400" />
+              <Link className="w-full" href={"#"}>
                 Animated
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <Earth className="text-green-400" />
+              <Link className="w-full" href={"#"}>
                 Special
               </Link>
             </div>
@@ -112,20 +127,20 @@ const SideNav = () => {
         {openLayouts && (
           <ul className="ml-3">
             <div className="flex flex-row m-1 gap-2 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem]  items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <PanelBottom className="text-purple-400" />
+              <Link className="w-full" href={"#"}>
                 Basic
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <PanelsLeftBottom className="text-purple-400" />
+              <Link className="w-full" href={"#"}>
                 Animated
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <PanelsTopLeft className="text-purple-400" />
+              <Link className="w-full" href={"#"}>
                 Special
               </Link>
             </div>
@@ -146,20 +161,20 @@ const SideNav = () => {
         {openForm && (
           <ul className="ml-3">
             <div className="flex flex-row m-1 gap-2 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem]  items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <SquarePen className="text-amber-400" />
+              <Link className="w-full" href={"/dashboard/forms/basic"}>
                 Basic
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <SquareSlash className="text-amber-400" />
+              <Link className="w-full" href={"#"}>
                 Animated
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <PencilLine className="text-amber-400" />
+              <Link className="w-full" href={"#"}>
                 Special
               </Link>
             </div>
@@ -180,37 +195,33 @@ const SideNav = () => {
         {openNav && (
           <ul className="ml-3">
             <div className="flex flex-row m-1 gap-2 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem]  items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <ChevronsRight className="text-rose-400" />
+              <Link className="w-full" href={"/dashboard/navs/basic"}>
                 Basic
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <ChevronsDown className="text-rose-400" />
+              <Link className="w-full" href={"#"}>
                 Animated
               </Link>
             </div>
             <div className="flex flex-row m-1 hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[11.5rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
-              <MousePointer className="text-blue-400" />
-              <Link className="w-full" href={"/dashboard/buttons"}>
+              <ArrowRightFromLine className="text-rose-400" />
+              <Link className="w-full" href={"#"}>
                 Special
               </Link>
             </div>
           </ul>
         )}
-        {/* End of main navigation items */}
         <div className="border-b border-dotted border-gray-500/50 w-[13vw] my-2 md:p-3 sm-p-2"></div>
 
-        {/* Documentation Section */}
         <div className="flex flex-row hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
           <TextSelect className="text-cyan-400" />
           <Link href={"/dashboard/docs"} className="w-full">
             Documentation
           </Link>
         </div>
-
-        {/* About Section */}
         <div className="flex flex-row hover:bg-gray-800/80 hover:shadow-md hover:shadow-black/20 hover:translate-x-1 transition-all duration-200 text-md p-2 rounded-xl w-[12.7rem] gap-2 items-center border border-gray-600/30 bg-gray-900/70 backdrop-blur-sm">
           <Compass className="text-teal-400" />
           <Link href={"/dashboard/about"} className="w-full">
